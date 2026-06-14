@@ -1,9 +1,9 @@
 {
-    "version": "1.0.10",
-    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.0.10/MS747_MCP_Router_v1.0.10.zip",
-    "sha256": "ddd1b0ef283a9c6f6bb7e840760c96048841d3684887fb8f6f0018b3a62d8f6e",
-    "size": 24695540,
+    "version": "1.0.11",
+    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.0.11/MS747_MCP_Router_v1.0.11.zip",
+    "sha256": "205af2a2f5e9ef0391d0288c669041fa87487ad07e6843b6f7c49d1fb38b340f",
+    "size": 24702136,
     "notes": [
-        "Require CH340 driver wording on first run and prompt firmware re-upload after router updates once MCP board is detected."
+        "Add PMDG Monitoring popup with live numerics, annunciators, switch positions, SimConnect health, and recent input-to-event trace."
     ]
 }
