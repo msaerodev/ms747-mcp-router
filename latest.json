@@ -1,9 +1,9 @@
 {
-    "version": "1.0.5",
-    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.0.5/MS747_MCP_Router_v1.0.5.zip",
-    "sha256": "fa89551dedced4a39a31024ed08a524aec0c9b6e4b198d0d75e0c7b529c3ed92",
-    "size": 13615419,
+    "version": "1.0.6",
+    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.0.6/MS747_MCP_Router_v1.0.6.zip",
+    "sha256": "e17256c80486054961340cee5ac86e0b187eb550dbd9ac2615153e527c3a3c81",
+    "size": 13614541,
     "notes": [
-        "MCP-inspired champagne panel UI theme based on #A88C72 with warm white text."
+        "Add independent updater window with visible progress, router wait, file apply, restart, and update log."
     ]
 }
