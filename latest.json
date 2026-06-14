@@ -1,9 +1,9 @@
 {
-    "version": "1.0.4",
-    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.0.4/MS747_MCP_Router_v1.0.4.zip",
-    "sha256": "f2107d43339d6669dee75a96a978a4ef914b6fadd516241699c27303ba35ae15",
-    "size": 13615216,
+    "version": "1.0.5",
+    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.0.5/MS747_MCP_Router_v1.0.5.zip",
+    "sha256": "fa89551dedced4a39a31024ed08a524aec0c9b6e4b198d0d75e0c7b529c3ed92",
+    "size": 13615419,
     "notes": [
-        "Fix update apply/restart flow, add local GitHub token file support."
+        "MCP-inspired champagne panel UI theme based on #A88C72 with warm white text."
     ]
 }
