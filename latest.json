@@ -1,9 +1,9 @@
 {
-    "version": "1.0.6",
-    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.0.6/MS747_MCP_Router_v1.0.6.zip",
-    "sha256": "e17256c80486054961340cee5ac86e0b187eb550dbd9ac2615153e527c3a3c81",
-    "size": 13614541,
+    "version": "1.0.7",
+    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.0.7/MS747_MCP_Router_v1.0.7.zip",
+    "sha256": "77bb42d10290d7e4a3ac4f7428b3c8a68d60d188505a324ec729e3a5cb63a199",
+    "size": 13616473,
     "notes": [
-        "Add independent updater window with visible progress, router wait, file apply, restart, and update log."
+        "Fix Hardware Test popup layout so bottom control buttons remain visible; add scrollable test list."
     ]
 }
