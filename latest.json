@@ -1,9 +1,9 @@
 {
-    "version": "1.0.9",
-    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.0.9/MS747_MCP_Router_v1.0.9.zip",
-    "sha256": "d7a56e71c4c52db6b56c50061b90dfcdf5a630945e9fb64cffcabdf47cd110c7",
-    "size": 24671549,
+    "version": "1.0.10",
+    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.0.10/MS747_MCP_Router_v1.0.10.zip",
+    "sha256": "ddd1b0ef283a9c6f6bb7e840760c96048841d3684887fb8f6f0018b3a62d8f6e",
+    "size": 24695540,
     "notes": [
-        "Same updater EXE flow as v1.0.8 for update-path verification."
+        "Require CH340 driver wording on first run and prompt firmware re-upload after router updates once MCP board is detected."
     ]
 }
