@@ -1,9 +1,9 @@
 {
-    "version": "1.0.8",
-    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.0.8/MS747_MCP_Router_v1.0.8.zip",
-    "sha256": "f518ddbae5a26023a30ee924db05d8b17fafdc284f32214f28223104403a1724",
-    "size": 24671001,
+    "version": "1.0.9",
+    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.0.9/MS747_MCP_Router_v1.0.9.zip",
+    "sha256": "d7a56e71c4c52db6b56c50061b90dfcdf5a630945e9fb64cffcabdf47cd110c7",
+    "size": 24671549,
     "notes": [
-        "Replace PowerShell updater flow with standalone MS747_MCP_Updater.exe progress window."
+        "Same updater EXE flow as v1.0.8 for update-path verification."
     ]
 }
