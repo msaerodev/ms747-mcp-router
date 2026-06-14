@@ -1,9 +1,9 @@
 {
-    "version": "1.0.11",
-    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.0.11/MS747_MCP_Router_v1.0.11.zip",
-    "sha256": "205af2a2f5e9ef0391d0288c669041fa87487ad07e6843b6f7c49d1fb38b340f",
-    "size": 24702136,
+    "version": "1.0.12",
+    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.0.12/MS747_MCP_Router_v1.0.12.zip",
+    "sha256": "8b845391b0b6cc5c55de9adacbb781346b3fcd34cf781b2ed9ccc2df43867fa7",
+    "size": 24709111,
     "notes": [
-        "Add PMDG Monitoring popup with live numerics, annunciators, switch positions, SimConnect health, and recent input-to-event trace."
+        "Fix PMDG client data receive path by auto-checking SDK broadcast config and switching to official-style raw PMDG data requests."
     ]
 }
