@@ -1,9 +1,9 @@
 {
-    "version": "1.0.3",
-    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.0.3/MS747_MCP_Router_v1.0.3.zip",
-    "sha256": "2b937df8c2fc619eafb7154a239b93f5c3fa1be5b31ac007bf2574f6de841477",
-    "size": 13614991,
+    "version": "1.0.4",
+    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.0.4/MS747_MCP_Router_v1.0.4.zip",
+    "sha256": "f2107d43339d6669dee75a96a978a4ef914b6fadd516241699c27303ba35ae15",
+    "size": 13615216,
     "notes": [
-        "Light UI refresh, PSX aircraft selector cleanup, Quick Preset cleanup, GitHub publish automation."
+        "Fix update apply/restart flow, add local GitHub token file support."
     ]
 }
