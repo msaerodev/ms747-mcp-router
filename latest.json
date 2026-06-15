@@ -1,9 +1,9 @@
 {
-    "version": "1.1.7",
-    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.1.7/MS747_MCP_Router_v1.1.7.zip",
-    "sha256": "830d1b94e1cc18d9de711405a892521449efca8c33712262bca87f2db5a2cd64",
-    "size": 24758728,
+    "version": "1.1.8",
+    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.1.8/MS747_MCP_Router_v1.1.8.zip",
+    "sha256": "8a72ae5ce88bca377dc698347563fc3cc7207ad59710201fa516795a9fa7170d",
+    "size": 32214173,
     "notes": [
-        "Rework Windows tray hide using a simpler Shell_NotifyIcon structure and stop falling back silently to taskbar minimize."
+        "Use pystray/Pillow for reliable Windows system tray hiding and fall back to a generated tray icon if app.ico is unavailable."
     ]
 }
