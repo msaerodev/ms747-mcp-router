@@ -1,9 +1,9 @@
 {
-    "version": "1.0.15",
-    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.0.15/MS747_MCP_Router_v1.0.15.zip",
-    "sha256": "dd1758c23364e0ea788e2117e8f93e493b2b166dd9549cc246b8bf35b2baabb0",
-    "size": 24543028,
+    "version": "1.1.4",
+    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.1.4/MS747_MCP_Router_v1.1.4.zip",
+    "sha256": "0ab0792cce5b5ef621819ebf890f280aeab0fbdd70b301c69feb99b15495f296",
+    "size": 24751471,
     "notes": [
-        "Add PMDG dedicated communication log, simulator-specific SimConnect DLL diagnostics, and preserve PMDG logs across updates."
+        "Add automatic running simulator detection for PSX, P3D, and MSFS with an Auto-detect toggle and Detect Now control."
     ]
 }
