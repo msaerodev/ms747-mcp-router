@@ -1,9 +1,9 @@
 {
-    "version": "1.1.4",
-    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.1.4/MS747_MCP_Router_v1.1.4.zip",
-    "sha256": "0ab0792cce5b5ef621819ebf890f280aeab0fbdd70b301c69feb99b15495f296",
-    "size": 24751471,
+    "version": "1.1.5",
+    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.1.5/MS747_MCP_Router_v1.1.5.zip",
+    "sha256": "5c5e1c99bab723ebfb1488b865a52bf29192a9a583dfe96908480802246b875c",
+    "size": 24753738,
     "notes": [
-        "Add automatic running simulator detection for PSX, P3D, and MSFS with an Auto-detect toggle and Detect Now control."
+        "Fix Hide to Background so it hides to the Windows tray with restore and exit controls."
     ]
 }
