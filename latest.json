@@ -1,9 +1,9 @@
 {
-    "version": "1.1.5",
-    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.1.5/MS747_MCP_Router_v1.1.5.zip",
-    "sha256": "5c5e1c99bab723ebfb1488b865a52bf29192a9a583dfe96908480802246b875c",
-    "size": 24753738,
+    "version": "1.1.6",
+    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.1.6/MS747_MCP_Router_v1.1.6.zip",
+    "sha256": "389d110b10259cd19018124f7f99943bd84face4468a7cd0b795f9f458049958",
+    "size": 24756961,
     "notes": [
-        "Fix Hide to Background so it hides to the Windows tray with restore and exit controls."
+        "Make Hide to Background and the window minimize button hide the router to the Windows system tray instead of the taskbar."
     ]
 }
