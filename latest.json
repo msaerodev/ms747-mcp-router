@@ -1,9 +1,9 @@
 {
-    "version": "1.1.6",
-    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.1.6/MS747_MCP_Router_v1.1.6.zip",
-    "sha256": "389d110b10259cd19018124f7f99943bd84face4468a7cd0b795f9f458049958",
-    "size": 24756961,
+    "version": "1.1.7",
+    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.1.7/MS747_MCP_Router_v1.1.7.zip",
+    "sha256": "830d1b94e1cc18d9de711405a892521449efca8c33712262bca87f2db5a2cd64",
+    "size": 24758728,
     "notes": [
-        "Make Hide to Background and the window minimize button hide the router to the Windows system tray instead of the taskbar."
+        "Rework Windows tray hide using a simpler Shell_NotifyIcon structure and stop falling back silently to taskbar minimize."
     ]
 }
