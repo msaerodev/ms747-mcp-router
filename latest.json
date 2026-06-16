@@ -1,9 +1,9 @@
 {
-    "version": "1.1.8",
-    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.1.8/MS747_MCP_Router_v1.1.8.zip",
-    "sha256": "8a72ae5ce88bca377dc698347563fc3cc7207ad59710201fa516795a9fa7170d",
-    "size": 32214173,
+    "version": "1.1.9",
+    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.1.9/MS747_MCP_Router_v1.1.9.zip",
+    "sha256": "44a24b30df942fd30be7d800af934a72182ab85b5e087f0c531016da5e943618",
+    "size": 32221888,
     "notes": [
-        "Use pystray/Pillow for reliable Windows system tray hiding and fall back to a generated tray icon if app.ico is unavailable."
+        "Clean release folder layout, move support files into subfolders, add rotating diagnostics logs, enlarge console area, and improve selected-control glow styling."
     ]
 }
