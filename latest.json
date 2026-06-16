@@ -1,9 +1,9 @@
 {
-    "version": "1.1.11",
-    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.1.11/MS747_MCP_Router_v1.1.11.zip",
-    "sha256": "f5b98d8df781d280d217cebd28c8f64059d64ec6ab10ff46892ca84bb6b7e96c",
-    "size": 32226837,
+    "version": "1.1.12",
+    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.1.12/MS747_MCP_Router_v1.1.12.zip",
+    "sha256": "5b39ad990911940ea8b1bf5efe075091856866af1b3b8840fef8d31883939927",
+    "size": 32225742,
     "notes": [
-        "Refine Main Settings simulator controls, Output Mapper and backlight test toggles, PMDG mismatch monitoring, checkbox visibility, and manual sync UI."
+        "Increase main window and System Log console height for better log visibility."
     ]
 }
