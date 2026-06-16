@@ -1,9 +1,9 @@
 {
-    "version": "1.1.10",
-    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.1.10/MS747_MCP_Router_v1.1.10.zip",
-    "sha256": "8db8731249fe13db78cd054ad39c1e1bc29c430aad0fa10b4123e84fef466ff6",
-    "size": 32221410,
+    "version": "1.1.11",
+    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.1.11/MS747_MCP_Router_v1.1.11.zip",
+    "sha256": "f5b98d8df781d280d217cebd28c8f64059d64ec6ab10ff46892ca84bb6b7e96c",
+    "size": 32226837,
     "notes": [
-        "Fix startup diagnostic console flashing by removing per-file PowerShell version checks, hiding process scans, and moving diagnostics off the GUI thread."
+        "Refine Main Settings simulator controls, Output Mapper and backlight test toggles, PMDG mismatch monitoring, checkbox visibility, and manual sync UI."
     ]
 }
