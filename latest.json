@@ -1,9 +1,9 @@
 {
-    "version": "1.1.14",
-    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.1.14/MS747_MCP_Router_v1.1.14.zip",
-    "sha256": "7a6cf88efd1b53b45d5f61bf035696144b3afe8f050e8b620dab57969e4de29c",
-    "size": 32221615,
+    "version": "1.2.0",
+    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.2.0/MS747_MCP_Router_v1.2.0.zip",
+    "sha256": "972fae378e42b40b1538661babe131e77bffe577a04173660dcf5d3538676c5f",
+    "size": 32222001,
     "notes": [
-        "Hide firmware source from customer release package; keep firmware upload runtime files only. Includes PMDG encoder direct-control cleanup and two-digit Mach step behavior."
+        "Compile Arduino firmware HEX automatically during release builds, prevent stale firmware packaging, and hide previous public releases."
     ]
 }
