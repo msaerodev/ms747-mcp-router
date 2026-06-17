@@ -1,9 +1,9 @@
 {
-    "version": "1.1.12",
-    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.1.12/MS747_MCP_Router_v1.1.12.zip",
-    "sha256": "5b39ad990911940ea8b1bf5efe075091856866af1b3b8840fef8d31883939927",
-    "size": 32225742,
+    "version": "1.1.13",
+    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.1.13/MS747_MCP_Router_v1.1.13.zip",
+    "sha256": "ca3504f92e3fc189fb5d6971d0930b4603a76765a143600e966158dd6c9e6512",
+    "size": 32229015,
     "notes": [
-        "Increase main window and System Log console height for better log visibility."
+        "Keep System Log clean by hiding routine periodic status messages unless debug checkboxes are enabled, and prevent repeated PMDG resync scheduling logs."
     ]
 }
