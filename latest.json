@@ -1,9 +1,9 @@
 {
-    "version": "1.1.13",
-    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.1.13/MS747_MCP_Router_v1.1.13.zip",
-    "sha256": "ca3504f92e3fc189fb5d6971d0930b4603a76765a143600e966158dd6c9e6512",
-    "size": 32229015,
+    "version": "1.1.14",
+    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.1.14/MS747_MCP_Router_v1.1.14.zip",
+    "sha256": "7a6cf88efd1b53b45d5f61bf035696144b3afe8f050e8b620dab57969e4de29c",
+    "size": 32221615,
     "notes": [
-        "Keep System Log clean by hiding routine periodic status messages unless debug checkboxes are enabled, and prevent repeated PMDG resync scheduling logs."
+        "Hide firmware source from customer release package; keep firmware upload runtime files only. Includes PMDG encoder direct-control cleanup and two-digit Mach step behavior."
     ]
 }
