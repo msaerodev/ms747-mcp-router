@@ -1,9 +1,9 @@
 {
-    "version": "1.2.1",
-    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.2.1/MS747_MCP_Router_v1.2.1.zip",
-    "sha256": "1512b5ca936e575f02414d6df9305c9733d0ba4cb75d2b73553170a3593217ab",
-    "size": 32250843,
+    "version": "1.2.2",
+    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.2.2/MS747_MCP_Router_v1.2.2.zip",
+    "sha256": "1c3ee8e78f543f31095cd2ebe5ac6e24d2d463d5e59c53d70619c9ef0a314e74",
+    "size": 32251500,
     "notes": [
-        "Fix PMDG IAS upper-band control: keep direct-set below 339 and route 340-399 through PMDG speed selector wheel events."
+        "Fix PMDG DSP panel mappings: correct swapped 747/777 DSP event IDs for ENG, STAT, ELEC, FUEL, ECS, HYD, DRS, and GEAR."
     ]
 }
