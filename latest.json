@@ -1,9 +1,9 @@
 {
-    "version": "1.2.2",
-    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.2.2/MS747_MCP_Router_v1.2.2.zip",
-    "sha256": "1c3ee8e78f543f31095cd2ebe5ac6e24d2d463d5e59c53d70619c9ef0a314e74",
-    "size": 32251500,
+    "version": "1.2.3",
+    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.2.3/MS747_MCP_Router_v1.2.3.zip",
+    "sha256": "fe5f76e8a7928f4864ae08daf2fa7b7787b0d57b06489738ea9e73a09e690ee3",
+    "size": 32277191,
     "notes": [
-        "Fix PMDG DSP panel mappings: correct swapped 747/777 DSP event IDs for ENG, STAT, ELEC, FUEL, ECS, HYD, DRS, and GEAR."
+        "Add router settings backup export/import, preserve user overrides across updates, harden firmware upload and MCP handshake."
     ]
 }
