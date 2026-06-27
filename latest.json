@@ -1,8 +1,8 @@
 {
     "version": "1.2.4",
     "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.2.4/MS747_MCP_Router_v1.2.4.zip",
-    "sha256": "f586ece1dc9d289e4ff175255008aac3a77db5f5114fcdc461e8fdb486faec7e",
-    "size": 32648432,
+    "sha256": "c8e25f3666e63c52189762118ad93b0bfebfda4bf090cc6b10a3da0de652e4d8",
+    "size": 32414611,
     "notes": [
         "Fix MSFS Asobo 747 heading/backlight/CANC-RCL/encoder routing, include the MS747 MCP Router customer user guide, and package docs in releases."
     ]
