@@ -1,9 +1,9 @@
 {
-    "version": "1.2.3",
-    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.2.3/MS747_MCP_Router_v1.2.3.zip",
-    "sha256": "fe5f76e8a7928f4864ae08daf2fa7b7787b0d57b06489738ea9e73a09e690ee3",
-    "size": 32277191,
+    "version": "1.2.4",
+    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.2.4/MS747_MCP_Router_v1.2.4.zip",
+    "sha256": "f586ece1dc9d289e4ff175255008aac3a77db5f5114fcdc461e8fdb486faec7e",
+    "size": 32648432,
     "notes": [
-        "Add router settings backup export/import, preserve user overrides across updates, harden firmware upload and MCP handshake."
+        "Fix MSFS Asobo 747 heading/backlight/CANC-RCL/encoder routing, include the MS747 MCP Router customer user guide, and package docs in releases."
     ]
 }
