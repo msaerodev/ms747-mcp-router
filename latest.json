@@ -1,8 +1,8 @@
 {
     "version": "1.2.5",
     "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.2.5/MS747_MCP_Router_v1.2.5.zip",
-    "sha256": "c16b282568693021ef03ab55ab369b69e764ae1cef91cfd0307c48d85f43bd52",
-    "size": 32426479,
+    "sha256": "9ed73275ea8891148961974a66ad127325656cf34facc38f2ee79e1c141a9a3f",
+    "size": 32430234,
     "notes": [
         "Startup diagnostics now stay in logs instead of cluttering the app console. Windows minimize now only minimizes the window; Hide to Background is the only tray/background action. Hardware Test now uses stricter encoder rotation counts with manual confirmation, 3-detection encoder push checks, and updated test order. Added a consumer-focused How to Use guide."
     ]
