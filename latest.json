@@ -1,9 +1,9 @@
 {
-    "version": "1.2.4",
-    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.2.4/MS747_MCP_Router_v1.2.4.zip",
-    "sha256": "c8e25f3666e63c52189762118ad93b0bfebfda4bf090cc6b10a3da0de652e4d8",
-    "size": 32414611,
+    "version": "1.2.5",
+    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.2.5/MS747_MCP_Router_v1.2.5.zip",
+    "sha256": "c16b282568693021ef03ab55ab369b69e764ae1cef91cfd0307c48d85f43bd52",
+    "size": 32426479,
     "notes": [
-        "Fix MSFS Asobo 747 heading/backlight/CANC-RCL/encoder routing, include the MS747 MCP Router customer user guide, and package docs in releases."
+        "Startup diagnostics now stay in logs instead of cluttering the app console. Windows minimize now only minimizes the window; Hide to Background is the only tray/background action. Hardware Test now uses stricter encoder rotation counts with manual confirmation, 3-detection encoder push checks, and updated test order. Added a consumer-focused How to Use guide."
     ]
 }
