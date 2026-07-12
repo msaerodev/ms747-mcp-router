@@ -1,9 +1,9 @@
 {
-    "version": "1.2.5",
-    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.2.5/MS747_MCP_Router_v1.2.5.zip",
-    "sha256": "9ed73275ea8891148961974a66ad127325656cf34facc38f2ee79e1c141a9a3f",
-    "size": 32430234,
+    "version": "1.2.6",
+    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.2.6/MS747_MCP_Router_v1.2.6.zip",
+    "sha256": "9411366acd3b8c1fa985d20497be8c7aaf634d5f26c3a4907ac79420f5712743",
+    "size": 32427496,
     "notes": [
-        "Startup diagnostics now stay in logs instead of cluttering the app console. Windows minimize now only minimizes the window; Hide to Background is the only tray/background action. Hardware Test now uses stricter encoder rotation counts with manual confirmation, 3-detection encoder push checks, and updated test order. Added a consumer-focused How to Use guide."
+        "Add Direction Reverse settings window for F/D L, F/D R, A/T ARM, DISENGAGE, IAS/HDG/ALT/V/S encoders; persist reverse settings in user mapping overrides; update user troubleshooting manuals."
     ]
 }
