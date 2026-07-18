@@ -185,6 +185,33 @@ When an update is available:
 5. For MSFS Asobo 747, install/update the MSFS support package again if the router recommends it.
 6. Restart MSFS before testing the Asobo 747.
 
+## Reporting a Problem to Support
+
+Use the built-in support report when the router, hardware panel, simulator connection, displays, lights, switches, or encoders do not behave correctly.
+
+1. Open `Debug & Options`.
+2. Find the `Support` section.
+3. Click `Report a Problem`.
+4. Enter a short title and describe what happened.
+5. Add the steps that make the problem happen again.
+6. Describe what you expected the router or panel to do.
+7. Leave the log and settings options enabled unless you specifically do not want to include them.
+8. Click `Create Report & Open GitHub`.
+
+The router then:
+
+- Records a fresh system diagnostic snapshot.
+- Collects recent router, simulator bridge, trace, crash, and interaction logs.
+- Includes the current router settings and customized mapping overrides when selected.
+- Removes known GitHub tokens, passwords, email addresses, and personal Windows paths.
+- Creates a ZIP in `logs/support_reports`.
+- Opens a new GitHub issue with the problem and environment details already filled in.
+- Selects the ZIP in File Explorer and copies its path to the clipboard.
+
+When the GitHub page opens, drag the selected ZIP into the issue, check the report, and click `Submit new issue`. GitHub requires you to sign in before submitting.
+
+The router does not store a GitHub password or access token. The final attachment and submission remain under your control, and the diagnostic ZIP stays on your computer unless you choose to attach it.
+
 ## Basic Troubleshooting
 
 ### The MCP panel is not detected
@@ -202,6 +229,27 @@ When an update is available:
 - Wait until the aircraft cockpit is fully loaded.
 - Use Manual Sync.
 - Restart the router after the aircraft is loaded.
+
+### A switch or knob works backward
+
+If a toggle switch or encoder direction is reversed, you do not need to edit presets manually.
+
+Use `Mapping & Test` > `Direction Reverse`.
+
+You can reverse these items individually:
+
+- F/D L switch
+- F/D R switch
+- A/T ARM switch
+- DISENGAGE bar
+- IAS encoder
+- HDG encoder
+- ALT encoder
+- V/S encoder
+
+Turn on the checkbox for the item that works backward, click Save, and test it again. The setting is saved permanently and will remain after restarting the router or updating the app.
+
+Use Hardware Test first if you are not sure whether the problem is reversed direction or an intermittent contact. Hardware Test shows the raw hardware signal so you can still diagnose wiring, connectors, and soldering.
 
 ### MSFS Asobo 747 knobs feel slow or incomplete
 
