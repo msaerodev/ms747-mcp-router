@@ -16,7 +16,7 @@ Stable direct download link for website buttons:
 
 Current direct ZIP download:
 
-[MS747_MCP_Router_v1.2.6.zip](https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.2.6/MS747_MCP_Router_v1.2.6.zip)
+[MS747_MCP_Router_v1.2.7.zip](https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.2.7/MS747_MCP_Router_v1.2.7.zip)
 
 Do not run the router from inside the ZIP file. Extract the ZIP first, then run `MS747 MCP Router.exe`.
 
@@ -159,6 +159,22 @@ The MSFS Asobo 747 needs this support package for the best MCP behavior, especia
 - **PMDG Interaction Probe**: Records PMDG interaction data for troubleshooting.
 
 Use these tools when checking whether the simulator is sending live data to the router.
+
+### Report a Problem
+
+- **Report a Problem**: Opens the guided support report window.
+- **Short title**: Enter a brief description, such as `IAS display does not update`.
+- **What happened?**: Describe the visible problem and when it occurred.
+- **Steps to reproduce**: List the actions that make the problem happen again.
+- **What did you expect?**: Describe the correct behavior you expected.
+- **Additional information**: Add anything else that may help identify the problem.
+- **Include recent router and simulator logs**: Adds recent router, bridge, trace, crash, and interaction logs to the diagnostic package.
+- **Include router settings and mapping overrides**: Adds the current router settings and customized mappings.
+- **Create Report & Open GitHub**: Creates a privacy-sanitized ZIP and opens a new GitHub issue with the problem and system details already filled in.
+
+After the GitHub page opens, drag the selected diagnostic ZIP into the issue, review the information, and click **Submit new issue**. A GitHub account is required for the final submission.
+
+The report removes known GitHub tokens, passwords, email addresses, and personal Windows paths automatically. The ZIP remains on your computer until you attach it, so you can review it before sending it.
 
 ## Mapping & Test Tab
 
