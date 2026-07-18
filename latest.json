@@ -1,9 +1,9 @@
 {
-    "version": "1.2.6",
-    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.2.6/MS747_MCP_Router_v1.2.6.zip",
-    "sha256": "60cedcbffd10eab977f9b602a0b208dc357509f1b8c80239d8b09ff45cc5f5ec",
-    "size": 32428345,
+    "version": "1.2.7",
+    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.2.7/MS747_MCP_Router_v1.2.7.zip",
+    "sha256": "12b5d28d2f69b3314fbcc206b4a23a5e8b44106db48a4eb777c615038106ec67",
+    "size": 32453872,
     "notes": [
-        "Add Direction Reverse settings window for F/D L, F/D R, A/T ARM, DISENGAGE, IAS/HDG/ALT/V/S encoders; persist reverse settings in user mapping overrides; update user troubleshooting manuals."
+        "Add guided GitHub support reports with privacy-sanitized diagnostic ZIP collection, pre-filled issue details, responsive support dialog, and updated user documentation."
     ]
 }
