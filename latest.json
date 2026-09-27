@@ -1,9 +1,9 @@
 {
-    "version": "1.2.10",
-    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.2.10/MS747_MCP_Router_v1.2.10.zip",
-    "sha256": "e36400cad5dbc09da4ec2e5097b78b3c1bcc4af533704e3053315a532e949a5e",
-    "size": 32848364,
+    "version": "1.2.11",
+    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.2.11/MS747_MCP_Router_v1.2.11.zip",
+    "sha256": "a51bb983df53444c8d6aa45c05f400fc2f7d08c4e5d26ab92675911d0299c3d0",
+    "size": 32849689,
     "notes": [
-        "Fix v1.2.9's digit/annunciator brightness fix being incomplete: a failed simulator-side refresh step (e.g. a PSX socket dropped across PC sleep/wake) could silently abort the rest of the post-reconnect resync, so brightness was never actually resent to the Arduino. The resync sequence is now resilient to that failure."
+        "Give digit/annunciator brightness the same always-on self-healing watchdog loop backlight already has, instead of relying solely on a one-shot resend inside the reconnect sequence. If brightness ever drifts out of sync with the Arduino for any reason, it now self-corrects within about 50ms with no extra USB traffic when nothing has changed."
     ]
 }
