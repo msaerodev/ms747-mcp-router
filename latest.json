@@ -1,9 +1,9 @@
 {
-    "version": "1.2.9",
-    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.2.9/MS747_MCP_Router_v1.2.9.zip",
-    "sha256": "62c2263fc400b2f0a1509ac5e792c86fce647839a0563d97941f431499504e42",
-    "size": 32849503,
+    "version": "1.2.10",
+    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.2.10/MS747_MCP_Router_v1.2.10.zip",
+    "sha256": "e36400cad5dbc09da4ec2e5097b78b3c1bcc4af533704e3053315a532e949a5e",
+    "size": 32848364,
     "notes": [
-        "Fix digit/annunciator brightness resetting to the default level after the PC sleeps and wakes (the router now remembers and restores your brightness setting after any MCP reconnect, not just on app restart). The in-app update failure message now also includes a manual download link if the automatic update can't complete."
+        "Fix v1.2.9's digit/annunciator brightness fix being incomplete: a failed simulator-side refresh step (e.g. a PSX socket dropped across PC sleep/wake) could silently abort the rest of the post-reconnect resync, so brightness was never actually resent to the Arduino. The resync sequence is now resilient to that failure."
     ]
 }
