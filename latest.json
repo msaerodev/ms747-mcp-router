@@ -1,9 +1,9 @@
 {
-    "version": "1.2.8",
-    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.2.8/MS747_MCP_Router_v1.2.8.zip",
-    "sha256": "01b6a3ea015a790b6802556098dfac4911822877ab4a9eefe1f65079ddcdf164",
-    "size": 32873023,
+    "version": "1.2.9",
+    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.2.9/MS747_MCP_Router_v1.2.9.zip",
+    "sha256": "62c2263fc400b2f0a1509ac5e792c86fce647839a0563d97941f431499504e42",
+    "size": 32849503,
     "notes": [
-        "Fix a crash when exporting/importing Router Settings backups (missing short_sha256 import). PSX host/port network settings are now saved and restored across app restarts instead of resetting to the default every time the app is relaunched."
+        "Fix digit/annunciator brightness resetting to the default level after the PC sleeps and wakes (the router now remembers and restores your brightness setting after any MCP reconnect, not just on app restart). The in-app update failure message now also includes a manual download link if the automatic update can't complete."
     ]
 }
