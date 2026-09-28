@@ -8,6 +8,30 @@ The router is the small Windows app that sits between your physical MCP panel an
 
 You normally keep the router running whenever you fly with the MCP panel.
 
+## Adjusting Knob Response
+
+1. Open **Encoder Mapper** and select the knob you want to adjust.
+2. Adjust the acceleration setting for your simulator.
+3. Click **Save Encoder**. Each knob has its own saved setting; it remains after restarting.
+
+From version 1.2.13, **Maximum Acceleration (PMDG / Asobo, x)** controls the
+maximum response from 1 to 8. Slow turns remain fine adjustments; faster turns
+increase the response up to that maximum. Select 1 for no PMDG or Asobo speed acceleration.
+Try a lower setting when small corrections are difficult, or a higher one when
+large changes require too much turning. PSX has a separate sensitivity setting.
+PMDG and Asobo use the same maximum-response bands. See [Changelog](../CHANGELOG.md)
+for tested aircraft and remaining limitations.
+
+## Asobo Indicator Checks
+
+From version 1.2.13, Asobo indicators follow the aircraft's
+panel power and lamp-test switch. Power the cockpit and operate the aircraft's
+lamp test, then return it to normal. A lamp-test pass checks the indicator path,
+not whether every autopilot mode can engage while parked. Check normal mode
+changes separately. Normal checks for LNAV, LOC, APP, SPD, THR, and CMD L/C/R remain
+incomplete. After updating, close MSFS, use **MSFS WASM Bridge > Install / Update**,
+and fully restart MSFS before **Manual Sync**.
+
 ## Before You Start
 
 You need:
@@ -72,6 +96,8 @@ Use the router's MSFS WASM Bridge section:
 7. Start or restart the router if needed.
 
 Important: Microsoft Flight Simulator usually loads these support packages only during simulator startup. Installing the package while the simulator is already running is not enough; restart MSFS.
+
+After the first install, the router keeps this package up to date on its own: each time the router starts, it checks whether a newer WASM bridge is bundled with your router version and, if MSFS is not currently running, updates it automatically in the background. You do not need to click Install/Update again after a router update — just make sure MSFS is closed when you start the router so the update can apply, then restart MSFS.
 
 ## PMDG Aircraft Setup
 
@@ -196,7 +222,7 @@ Use the built-in support report when the router, hardware panel, simulator conne
 5. Add the steps that make the problem happen again.
 6. Describe what you expected the router or panel to do.
 7. Leave the log and settings options enabled unless you specifically do not want to include them.
-8. Click `Create Report & Open GitHub`.
+8. Click `Create Report & Open GitHub`, or `Email Instead (No GitHub Account)` if you do not have a GitHub account.
 
 The router then:
 
@@ -204,13 +230,16 @@ The router then:
 - Collects recent router, simulator bridge, trace, crash, and interaction logs.
 - Includes the current router settings and customized mapping overrides when selected.
 - Removes known GitHub tokens, passwords, email addresses, and personal Windows paths.
+- Removes your Windows account name and PC name, including when they appear inside log file names.
 - Creates a ZIP in `logs/support_reports`.
-- Opens a new GitHub issue with the problem and environment details already filled in.
+- Opens a new GitHub issue (or your email app, for the email path) with the problem and environment details already filled in.
 - Selects the ZIP in File Explorer and copies its path to the clipboard.
 
 When the GitHub page opens, drag the selected ZIP into the issue, check the report, and click `Submit new issue`. GitHub requires you to sign in before submitting.
 
-The router does not store a GitHub password or access token. The final attachment and submission remain under your control, and the diagnostic ZIP stays on your computer unless you choose to attach it.
+If you used `Email Instead`, your email app opens addressed to the developer with the report text already filled in. A `mailto:` link cannot attach files, so attach the ZIP selected in File Explorer to the email yourself before sending. This path needs no GitHub account.
+
+The router does not store a GitHub password or access token, and does not send email on your behalf. The final attachment and submission remain under your control, and the diagnostic ZIP stays on your computer unless you choose to attach it.
 
 ## Basic Troubleshooting
 
