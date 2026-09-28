@@ -20,6 +20,10 @@ Current direct ZIP download:
 
 [Changelog and known limitations](CHANGELOG.md)
 
+Detailed usage and troubleshooting: [User Manual](docs/USER_MANUAL.md).
+Word copies: [Full manual](docs/MS747_MCP_Router_User_Manual.docx) and
+[One-page quick guide](docs/MS747_MCP_Router_Quick_User_Guide_v1.2.13.docx).
+
 Do not run the router from inside the ZIP file. Extract the ZIP first, then run `MS747 MCP Router.exe`.
 
 ## Supported Simulator Modes
