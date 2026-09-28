@@ -2,6 +2,11 @@
 
 This guide is for pilots and builders using the MS747 MCP hardware panel with the MS747 MCP Router app. It focuses on normal setup and day-to-day use, without internal wiring or developer details.
 
+The revised v1.2.13 [User Manual](USER_MANUAL.md) gives ordered setup and troubleshooting
+steps. Download the [full Word manual](MS747_MCP_Router_User_Manual.docx) or the
+[one-page software insert](MS747_MCP_Router_Quick_User_Guide_v1.2.13.docx) separately.
+These updated Word documents are not inside the previously published v1.2.13 ZIP.
+
 ## What the Router Does
 
 The router is the small Windows app that sits between your physical MCP panel and your flight simulator. It reads your panel buttons, switches, knobs, displays, lights, and backlighting, then keeps them in sync with the selected simulator.
