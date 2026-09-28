@@ -1,9 +1,9 @@
 {
-    "version": "1.2.11",
-    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.2.11/MS747_MCP_Router_v1.2.11.zip",
-    "sha256": "a51bb983df53444c8d6aa45c05f400fc2f7d08c4e5d26ab92675911d0299c3d0",
-    "size": 32849689,
+    "version": "1.2.12",
+    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.2.12/MS747_MCP_Router_v1.2.12.zip",
+    "sha256": "7d570cc7b914c7b68ed022ffa389bafa84328f70b84ddc6b57adef6b96e11052",
+    "size": 32848424,
     "notes": [
-        "Give digit/annunciator brightness the same always-on self-healing watchdog loop backlight already has, instead of relying solely on a one-shot resend inside the reconnect sequence. If brightness ever drifts out of sync with the Arduino for any reason, it now self-corrects within about 50ms with no extra USB traffic when nothing has changed."
+        "Fix Hardware Test backlight flashing on then immediately turning back off during the WH/OR backlight test steps. The always-on backlight refresh loop was racing against Hardware Test's raw output override and winning within about 50ms; it (and the new brightness self-healing loop from the previous release) now correctly stay out of the way while Hardware Test is running."
     ]
 }
