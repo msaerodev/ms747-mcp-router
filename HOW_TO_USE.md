@@ -4,6 +4,11 @@ This guide is for pilots and builders using the MS747 MCP hardware panel with th
 
 You can find the full guide in `docs/HOW_TO_USE.md` in each release package.
 
+For the revised v1.2.13 setup and symptom-by-symptom troubleshooting procedures,
+see [User Manual](docs/USER_MANUAL.md) or its [Word copy](docs/MS747_MCP_Router_User_Manual.docx).
+The revised [one-page software insert](docs/MS747_MCP_Router_Quick_User_Guide_v1.2.13.docx)
+is provided separately from the already-published ZIP.
+
 ## Quick Start
 
 1. Extract the MS747 MCP Router release ZIP.
