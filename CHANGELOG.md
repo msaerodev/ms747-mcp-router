@@ -1,0 +1,32 @@
+# Changelog
+
+## v1.2.13 - 2026-09-29
+
+### Improvements
+
+- Added a saved, per-knob **Maximum Acceleration (PMDG / Asobo, x)** setting from 1 to 8. Slow turns remain fine adjustments; faster turns increase the response up to the selected maximum. Select 1 to disable speed acceleration. PSX retains its separate setting.
+- Improved PMDG speed adjustment during short bursts, pauses to regrip, and direction changes. New turns accumulate toward the requested value rather than restarting from delayed simulator feedback.
+- Removed per-step waiting from the PMDG high-speed adjustment path. In parked MSFS 2024 PMDG 777 tests, the previously measured approximately 3-second trailing response was reduced to at most 125 ms in the tested upper-speed cases. This is not a zero-latency guarantee.
+- Improved automatic PMDG SDK setup discovery for Microsoft Flight Simulator 2024 installations.
+
+### Fixes
+
+- Fixed Asobo 747 support-package startup and command acknowledgement handling, preventing lost or stale encoder adjustments.
+- Fixed Asobo 747 numeric control, including altitude selection, IAS/Mach display handling, and direction changes under accelerated input.
+- Fixed Asobo 747 HDG HOLD selecting HDG SEL instead of HDG HOLD; verified the cockpit HDG HOLD indication.
+- Corrected Asobo 747 APP indicator detection and the SPD button command binding.
+- Made all 13 Asobo MCP indicators follow the aircraft's dedicated mode indications, cockpit panel power, and lamp-test switch rather than unrelated autopilot indications.
+- Restricted customer documentation packaging to user guides and this changelog. Internal engineering reports and local test exports are not included.
+
+### Update Instructions
+
+- Close the router before applying the update. Existing saved settings are preserved by the updater.
+- For Asobo 747, close Microsoft Flight Simulator, open the updated router, and use **MSFS WASM Bridge > Install / Update**. Fully restart the simulator and load the aircraft before using **Manual Sync**.
+- Adjust each knob's response in **Encoder Mapper**, then click **Save Encoder**.
+
+### Verification and Known Limitations
+
+- Actual parked-aircraft virtual-input tests passed 20 PMDG 777 numeric cases and 8 maximum-acceleration Asobo burst/reversal cases. Asobo Mach roundtrip and all 13 lamp-test output/restoration checks passed.
+- Normal Asobo activation/illumination was observed for VNAV, FLCH, HDG HOLD, V/S, and ALT HOLD. Normal LNAV, LOC, APP, SPD, THR, and CMD L/C/R activation remains unverified. A successful lamp test does not prove these modes engage under normal flight conditions.
+- The shared PMDG changes are included for P3D, but this update has not been live-tested in P3D. PMDG Mach, active V/S, normal PMDG annunciators, eligible in-flight Asobo conditions, and physical MCP hardware remain unverified.
+- Windows only; this release does not add native macOS support.
