@@ -16,7 +16,9 @@ Stable direct download link for website buttons:
 
 Current direct ZIP download:
 
-[MS747_MCP_Router_v1.2.7.zip](https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.2.7/MS747_MCP_Router_v1.2.7.zip)
+[MS747_MCP_Router_v1.2.13.zip](https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.2.13/MS747_MCP_Router_v1.2.13.zip)
+
+[Changelog and known limitations](CHANGELOG.md)
 
 Do not run the router from inside the ZIP file. Extract the ZIP first, then run `MS747 MCP Router.exe`.
 
@@ -119,7 +121,7 @@ Leave these off for normal flying. Turn them on only when diagnosing a problem o
 
 ### Settings Backup
 
-- **Export Settings**: Saves display settings, backlight settings, annunciator settings, and user mapping overrides to a backup file.
+- **Export Settings**: Saves display settings, backlight settings, annunciator settings, PSX network settings (host/port), and user mapping overrides to a backup file.
 - **Import Settings**: Restores a previously exported router settings backup.
 
 Use this before moving to another PC, reinstalling the router, or changing many mappings.
@@ -128,7 +130,7 @@ Use this before moving to another PC, reinstalling the router, or changing many 
 
 - **Update now**: Downloads and installs the latest available router release when an update is available.
 
-After an update, upload firmware if the router asks for it. For MSFS Asobo 747, update the WASM Bridge if recommended, then restart MSFS.
+After an update, upload firmware if the router asks for it. The router keeps the MSFS Asobo 747 WASM Bridge up to date on its own once it has been installed once (see below), so a manual WASM update is normally not needed after a router update — just make sure MSFS is closed when the router starts, then restart MSFS.
 
 ### Firmware
 
@@ -151,6 +153,12 @@ Do not unplug the panel during firmware upload. If upload fails, reconnect the p
 
 The MSFS Asobo 747 needs this support package for the best MCP behavior, especially fast encoder movement and cockpit-specific controls. After installing or updating it, fully restart Microsoft Flight Simulator.
 
+Version 1.2.13 includes Asobo speed-display, encoder delivery and support-package corrections. Parked-aircraft encoder and Mach tests have passed; full button/indicator verification is still incomplete. Close MSFS before **Install / Update**, then fully restart it; an installed-package message alone does not confirm that the MCP controls work. See [Changelog](CHANGELOG.md) for the tested scope and remaining limitations.
+
+The development indicator update follows the loaded aircraft's panel power and lamp-test switch. All 13 indicator output paths passed a simulator lamp test; normal mode engagement is a separate check and is not fully qualified. See [development validation](docs/ASOBO_WASM_LIVE_VALIDATION.md).
+
+After the first manual install, the router checks the bundled WASM version against the installed one on every startup and updates it automatically in the background when MSFS is not running, so the button above is mainly needed for the very first install.
+
 ### Monitoring Tools
 
 - **PSX Monitoring**: Opens a live monitor for PSX state.
@@ -171,10 +179,13 @@ Use these tools when checking whether the simulator is sending live data to the 
 - **Include recent router and simulator logs**: Adds recent router, bridge, trace, crash, and interaction logs to the diagnostic package.
 - **Include router settings and mapping overrides**: Adds the current router settings and customized mappings.
 - **Create Report & Open GitHub**: Creates a privacy-sanitized ZIP and opens a new GitHub issue with the problem and system details already filled in.
+- **Email Instead (No GitHub Account)**: Creates the same privacy-sanitized ZIP and opens your default email app instead, addressed to the developer, with the problem details already filled in.
 
 After the GitHub page opens, drag the selected diagnostic ZIP into the issue, review the information, and click **Submit new issue**. A GitHub account is required for the final submission.
 
-The report removes known GitHub tokens, passwords, email addresses, and personal Windows paths automatically. The ZIP remains on your computer until you attach it, so you can review it before sending it.
+If you do not have (or do not want to create) a GitHub account, use **Email Instead** instead. A `mailto:` link cannot attach a file, so the diagnostic ZIP is selected in File Explorer for you to attach to the email by hand before sending.
+
+The report removes known GitHub tokens, passwords, email addresses, personal Windows paths, and your Windows account and PC names automatically. The ZIP remains on your computer until you attach it, so you can review it before sending it.
 
 ## Mapping & Test Tab
 
@@ -249,8 +260,8 @@ The Encoder Mapper controls encoder commands and acceleration.
 - **CW Cmd**: Command used for clockwise rotation.
 - **CCW Cmd**: Command used for counterclockwise rotation.
 - **Acceleration (PSX)**: Sets encoder acceleration for PSX mode.
-- **Acceleration (PMDG)**: Sets encoder acceleration for PMDG and MSFS-style operation.
-- **Save Encoder**: Saves the selected encoder settings.
+- **Maximum Acceleration (PMDG / Asobo, x)**: Choose a maximum from 1 to 8 for the selected knob. Slow turns make fine adjustments; faster turns increase the response up to this maximum for both PMDG and Asobo. Choose 1 to disable speed acceleration. PSX keeps its separate setting. Click **Save Encoder** to retain the setting.
+- **Save Encoder**: Saves the selected encoder settings, including its acceleration setting, for the next launch. Repeat for each knob you want to adjust.
 
 If the direction is wrong, use **Direction Reverse** instead of swapping commands manually.
 
@@ -388,7 +399,7 @@ Do not edit presets manually for this problem.
 - `MS747 MCP Router.exe`: Main router application.
 - `MS747 MCP Updater.exe`: Update helper.
 - `docs/HOW_TO_USE.md`: Full user guide.
-- `docs/MS747_MCP_Router_One_Page_User_Guide.docx`: One-page printable quick guide.
+- `docs/MS747_MCP_Router_One_Page_User_Guide.docx`: Two-page printable quick guide (file name kept for compatibility with existing links).
 - `packages/msfs/ms747-mcp-wasm-bridge/`: MSFS support package for the Asobo 747.
 - `bridges/`: Simulator bridge components used by the router.
 - `tools/firmware/`: Firmware upload tools.
