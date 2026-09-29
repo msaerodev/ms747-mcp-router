@@ -1,9 +1,9 @@
 {
-    "version": "1.2.15",
-    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.2.15/MS747_MCP_Router_v1.2.15.zip",
-    "sha256": "dbb7e63ea09ae72f54f9e7dc29efac7fe0b29c6f94454a70c32cb5ac48e1adfb",
-    "size": 32873173,
+    "version": "1.2.16",
+    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.2.16/MS747_MCP_Router_v1.2.16.zip",
+    "sha256": "c4f754a368a9c721d29747322a0ef0d537ca89cea3cda03c03100477db6751f9",
+    "size": 32869080,
     "notes": [
-        "If an update still fails with an access-denied error after v1.2.14's automatic admin-permission prompt, the failure message now also explains Windows Security's Controlled folder access, which can block this app from writing to Documents, Desktop, and similar folders even with admin rights approved, and shows exactly where to allow the app."
+        "Rewrote the user manual and quick guide in plain consumer language with supported simulators/aircraft listed up front. Fixed a rare Hardware Test annunciator-brightness conflict with a connected PSX session, a rare router-settings cross-thread read, and hardened Asobo encoder command sequence tracking with no change to how commands are sent."
     ]
 }
