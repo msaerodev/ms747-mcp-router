@@ -1,9 +1,9 @@
 {
-    "version": "1.2.14",
-    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.2.14/MS747_MCP_Router_v1.2.14.zip",
-    "sha256": "221eaa9cc50d4002eb3298bb834d3559ca8da4791f021d83ccb7a87919105c60",
-    "size": 32869839,
+    "version": "1.2.15",
+    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.2.15/MS747_MCP_Router_v1.2.15.zip",
+    "sha256": "dbb7e63ea09ae72f54f9e7dc29efac7fe0b29c6f94454a70c32cb5ac48e1adfb",
+    "size": 32873173,
     "notes": [
-        "Fixed automatic updates failing with an access-denied error when installed in a folder that needs administrator permission to write to (most commonly Program Files). The router now shows the standard Windows admin permission prompt automatically only when it's actually needed, instead of requiring the whole app to always run as administrator."
+        "If an update still fails with an access-denied error after v1.2.14's automatic admin-permission prompt, the failure message now also explains Windows Security's Controlled folder access, which can block this app from writing to Documents, Desktop, and similar folders even with admin rights approved, and shows exactly where to allow the app."
     ]
 }
