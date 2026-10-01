@@ -1,9 +1,9 @@
 {
-    "version": "1.2.16",
-    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.2.16/MS747_MCP_Router_v1.2.16.zip",
-    "sha256": "c4f754a368a9c721d29747322a0ef0d537ca89cea3cda03c03100477db6751f9",
-    "size": 32869080,
+    "version": "1.2.17",
+    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.2.17/MS747_MCP_Router_v1.2.17.zip",
+    "sha256": "2211416fe6f9b31600d1939f34a7af3191d4286136bf8be5057b69a20d34a510",
+    "size": 34824534,
     "notes": [
-        "Rewrote the user manual and quick guide in plain consumer language with supported simulators/aircraft listed up front. Fixed a rare Hardware Test annunciator-brightness conflict with a connected PSX session, a rare router-settings cross-thread read, and hardened Asobo encoder command sequence tracking with no change to how commands are sent."
+        "Fixed automatic updates failing with a TLS certificate verification error (CERTIFICATE_VERIFY_FAILED: unable to get local issuer certificate) on some Windows machines -- this had nothing to do with admin rights or file permissions. The router now verifies its update downloads against the same certificate trust store Windows itself already uses."
     ]
 }
