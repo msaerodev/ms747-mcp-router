@@ -1,9 +1,9 @@
 {
-    "version": "1.2.17",
-    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.2.17/MS747_MCP_Router_v1.2.17.zip",
-    "sha256": "2211416fe6f9b31600d1939f34a7af3191d4286136bf8be5057b69a20d34a510",
-    "size": 34824534,
+    "version": "1.2.18",
+    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.2.18/MS747_MCP_Router_v1.2.18.zip",
+    "sha256": "cf1e5988faef930f18cf2fb7f344f2f21a03e9a0544ddbce1959cb88fae63bf0",
+    "size": 34826097,
     "notes": [
-        "Fixed automatic updates failing with a TLS certificate verification error (CERTIFICATE_VERIFY_FAILED: unable to get local issuer certificate) on some Windows machines -- this had nothing to do with admin rights or file permissions. The router now verifies its update downloads against the same certificate trust store Windows itself already uses."
+        "Fixed the panel showing NOT CONNECTED with brightness controls doing nothing (PermissionError 13 Access is denied / Write timeout): only one program can use the panel's COM port, so the router now refuses to start a second copy, and a busy COM port is reported on the status line instead of a bare error. Close every running copy of the router before updating."
     ]
 }
