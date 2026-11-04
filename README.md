@@ -38,6 +38,8 @@ The router also runs on macOS (Apple Silicon and Intel, macOS 11 or later) with 
 
 Hide to Background hides the window; click the router's Dock icon to bring it back.
 
+**Update now** works on the Mac as well: the router downloads the new app, quits, replaces itself and reopens (your previous version is restored if anything fails). If macOS asks for your password, the app is in a folder your account cannot change -- approve it, or move the app to your own Applications folder. Manual fallback: download `MS747_MCP_Router_mac_latest.zip` and drag the new app over the old one.
+
 ## Where Your Settings Are Kept
 
 From v1.2.20 your settings (mapping, Direction Reverse, acceleration, brightness, colours, PSX address) are stored in your user profile, not in the router folder:
