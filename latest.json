@@ -1,15 +1,16 @@
 {
-    "version": "1.2.20",
-    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.2.20/MS747_MCP_Router_v1.2.20.zip",
-    "sha256": "399c0d0968047b10eb4fa722af54416fe10919b6be433bfdce6003566b58c07d",
-    "size": 35037514,
+    "version": "1.2.21",
+    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.2.21/MS747_MCP_Router_v1.2.21.zip",
+    "sha256": "f490fb50956d24efb462b900d753694156a7884b2b0cfbd877bf65a948a667ec",
+    "size": 35050830,
     "notes": [
-        "New: macOS version (Apple Silicon and Intel) for Aerowinx PSX, with the same panel, mapping, brightness, Hardware Test, firmware upload, update and support features as Windows. Download MS747_MCP_Router_mac_latest.zip; first launch: right-click the app and choose Open.",
-        "Your settings are now kept in your user profile, so updates, re-extracted ZIPs and new installs in any folder keep your mapping, Direction Reverse, acceleration, brightness and PSX address. Existing settings are copied over automatically on first start."
+        "MSFS Asobo 747 support package: install/update can no longer leave a broken package; it is not touched while MSFS uses it, is checked first, and the previous package is restored on failure.",
+        "PSX: knob turns and presses made while PSX was disconnected are no longer sent in a burst when it reconnects.",
+        "PMDG/MSFS: no more connection-helper restarts every few seconds while the simulator is closed; a lost simulator connection is restarted automatically. Logs no longer grow without limit."
     ],
     "macos": {
-        "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.2.20/MS747_MCP_Router_v1.2.20_mac.zip",
-        "sha256": "53be9a557b5160cb8810654bc28f94fa761000a2336401204681847bdc47dd0b",
-        "size": 26068566
+        "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.2.21/MS747_MCP_Router_v1.2.21_mac.zip",
+        "sha256": "09487360dcc3e1af61f5f79720449a51debdc76672e03fde1bab5724a81fb10f",
+        "size": 26077742
     }
 }
