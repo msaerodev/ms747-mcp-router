@@ -37,6 +37,17 @@ changes separately. Normal checks for LNAV, LOC, APP, SPD, THR, and CMD L/C/R re
 incomplete. After updating, close MSFS, use **MSFS WASM Bridge > Install / Update**,
 and fully restart MSFS before **Manual Sync**.
 
+## Using the Router on a Mac
+
+The Mac version supports **Aerowinx PSX** and otherwise works the same as on Windows (panel, mapping, brightness, Hardware Test, firmware upload, updates, support reports).
+
+1. Download [MS747_MCP_Router_mac_latest.zip](https://github.com/msaerodev/ms747-mcp-router/releases/latest/download/MS747_MCP_Router_mac_latest.zip), open it and drag **MS747 MCP Router** into **Applications**.
+2. The app is not signed by Apple: the first time, right-click the app, choose **Open**, then **Open** again (or use **System Settings > Privacy & Security > Open Anyway**).
+3. Connect the MCP panel by USB; no driver installation is needed on macOS.
+4. To bring the window back after **Hide to Background**, click the router's Dock icon.
+
+Your settings are kept in `~/Library/Application Support/MS747 MCP Router` (Windows: `%LOCALAPPDATA%\MS747 MCP Router`), so updates and new installs keep them.
+
 ## Before You Start
 
 You need:
