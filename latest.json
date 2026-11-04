@@ -1,11 +1,15 @@
 {
-    "version": "1.2.19",
-    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.2.19/MS747_MCP_Router_v1.2.19.zip",
-    "sha256": "b7e185818bf6ca6c1548dbdf6c92201fe60353503e225f6a4244194987aa4f84",
-    "size": 35016331,
+    "version": "1.2.20",
+    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.2.20/MS747_MCP_Router_v1.2.20.zip",
+    "sha256": "399c0d0968047b10eb4fa722af54416fe10919b6be433bfdce6003566b58c07d",
+    "size": 35037514,
     "notes": [
-        "MCP indicator brightness now always follows your LED Brightness setting: releasing PSX IND LTS TEST or connecting to PSX/PMDG no longer leaves the indicators at the simulator's level (too dim orange lights).",
-        "More robust in-app updates: download to the temp folder, retry locked files, ask for admin permission when needed, and restore the previous version if an update cannot finish.",
-        "New \"Download latest version manually\" button and manual download link in every update error. If updating from v1.2.18 fails, use that link and extract the ZIP over your router folder (settings are kept)."
-    ]
+        "New: macOS version (Apple Silicon and Intel) for Aerowinx PSX, with the same panel, mapping, brightness, Hardware Test, firmware upload, update and support features as Windows. Download MS747_MCP_Router_mac_latest.zip; first launch: right-click the app and choose Open.",
+        "Your settings are now kept in your user profile, so updates, re-extracted ZIPs and new installs in any folder keep your mapping, Direction Reverse, acceleration, brightness and PSX address. Existing settings are copied over automatically on first start."
+    ],
+    "macos": {
+        "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.2.20/MS747_MCP_Router_v1.2.20_mac.zip",
+        "sha256": "53be9a557b5160cb8810654bc28f94fa761000a2336401204681847bdc47dd0b",
+        "size": 26068566
+    }
 }
