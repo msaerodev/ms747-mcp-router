@@ -40,6 +40,8 @@ For Asobo indicator checks, use the aircraft's own lamp test
 with the cockpit powered. All indicators lighting during that test confirms the
 indicator path, not that every flight mode can engage in the current flight conditions.
 Normal flight-mode checks are still incomplete; see [Changelog](CHANGELOG.md).
+Mac users: download [the Mac version](https://github.com/msaerodev/ms747-mcp-router/releases/latest/download/MS747_MCP_Router_mac_latest.zip) (Aerowinx PSX); see README > macOS. Settings are kept in your user profile on both systems.
+
 If **Update now** fails, use **Download latest version manually** (Debug & Options > Update) or https://github.com/msaerodev/ms747-mcp-router/releases/latest/download/MS747_MCP_Router_latest.zip and extract it over the router folder; settings are kept.
 
 After updating, close MSFS, use **MSFS WASM Bridge > Install / Update**, and fully
