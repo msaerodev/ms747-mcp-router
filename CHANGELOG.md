@@ -1,5 +1,20 @@
 # Changelog
 
+## v1.2.21 - 2026-11-04
+
+### Fixes
+
+- **MSFS Asobo 747 support package**: installing or updating it can no longer leave a broken package (missing its `.wasm`) in the Community folder. The router now refuses to touch the package while MSFS is using it, prepares and checks the new package first, and puts the previous one back if anything fails. The automatic update at startup only runs when the router can confirm MSFS is closed. Uninstall keeps a backup instead of deleting.
+- **PSX**: knob turns and button presses made while PSX was disconnected or restarting were sent all at once when it came back. They are now discarded, and the panel is re-synchronised on reconnect as before. Loading a situation no longer starts overlapping re-syncs.
+- **PMDG / MSFS**: when the simulator is closed the router no longer restarts its PMDG connection helper every few seconds; if the simulator crashes or quits without notice, the router restarts the connection by itself instead of waiting for a mode change. Asobo 747 knobs no longer stop working after the simulator connection drops during a knob turn.
+- Simulator connection logs no longer grow without limit (a PMDG log could reach hundreds of MB).
+- macOS: the panel is no longer probed twice on connect.
+
+### Update Instructions
+
+- Use **Update now** as usual. No firmware upload is needed for this version.
+- This PC's MSFS support package: if MSFS Asobo 747 knobs did not respond, close MSFS and click **Install / Update WASM Bridge** once.
+
 ## v1.2.20 - 2026-11-04
 
 ### New
