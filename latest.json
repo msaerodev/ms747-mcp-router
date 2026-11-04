@@ -1,9 +1,11 @@
 {
-    "version": "1.2.18",
-    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.2.18/MS747_MCP_Router_v1.2.18.zip",
-    "sha256": "cf1e5988faef930f18cf2fb7f344f2f21a03e9a0544ddbce1959cb88fae63bf0",
-    "size": 34826097,
+    "version": "1.2.19",
+    "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.2.19/MS747_MCP_Router_v1.2.19.zip",
+    "sha256": "b7e185818bf6ca6c1548dbdf6c92201fe60353503e225f6a4244194987aa4f84",
+    "size": 35016331,
     "notes": [
-        "Fixed the panel showing NOT CONNECTED with brightness controls doing nothing (PermissionError 13 Access is denied / Write timeout): only one program can use the panel's COM port, so the router now refuses to start a second copy, and a busy COM port is reported on the status line instead of a bare error. Close every running copy of the router before updating."
+        "MCP indicator brightness now always follows your LED Brightness setting: releasing PSX IND LTS TEST or connecting to PSX/PMDG no longer leaves the indicators at the simulator's level (too dim orange lights).",
+        "More robust in-app updates: download to the temp folder, retry locked files, ask for admin permission when needed, and restore the previous version if an update cannot finish.",
+        "New \"Download latest version manually\" button and manual download link in every update error. If updating from v1.2.18 fails, use that link and extract the ZIP over your router folder (settings are kept)."
     ]
 }
