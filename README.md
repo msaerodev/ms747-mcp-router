@@ -30,7 +30,7 @@ Do not run the router from inside the ZIP file. Extract the ZIP first, then run 
 
 The router also runs on macOS (Apple Silicon and Intel, macOS 11 or later) with **Aerowinx PSX**. PMDG and the MSFS Asobo 747 need Windows simulators, so the Mac version shows the PSX mode only; everything else -- panel connection, mapping, Direction Reverse, acceleration, brightness, Hardware Test, firmware upload, updates and Report a Problem -- works the same as on Windows.
 
-1. Download [MS747_MCP_Router_mac_latest.zip](https://github.com/msaerodev/ms747-mcp-router/releases/latest/download/MS747_MCP_Router_mac_latest.zip) and open it.
+1. Download [MS747_MCP_Router_mac_latest.zip](https://github.com/msaerodev/ms747-mcp-router/releases/latest/download/MS747_MCP_Router_mac_latest.zip) (about 26 MB) and open it.
 2. Drag **MS747 MCP Router** into your **Applications** folder.
 3. The app is not signed by Apple. The first time, **right-click (or Control-click) the app and choose Open**, then **Open** again. If macOS says it "cannot be opened", go to **System Settings > Privacy & Security** and click **Open Anyway**.
 4. Connect the MCP panel by USB. macOS includes the CH340 USB driver, so nothing else needs to be installed.
