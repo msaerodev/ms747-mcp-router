@@ -16,7 +16,7 @@ Stable direct download link for website buttons:
 
 Current direct ZIP download:
 
-[MS747_MCP_Router_v1.2.13.zip](https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.2.13/MS747_MCP_Router_v1.2.13.zip)
+[MS747_MCP_Router_v1.2.19.zip](https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.2.19/MS747_MCP_Router_v1.2.19.zip)
 
 [Changelog and known limitations](CHANGELOG.md)
 
@@ -35,7 +35,7 @@ Do not run the router from inside the ZIP file. Extract the ZIP first, then run 
 
 ## First-Time Setup
 
-1. Extract the latest release ZIP to a normal folder.
+1. Extract the latest release ZIP to a normal folder (Documents, Desktop, or similar). Avoid `Program Files` or other admin-protected folders -- the router itself doesn't need admin rights there, but Windows will ask for an admin prompt every time it updates.
 2. Connect the MCP panel to the PC by USB.
 3. Start the simulator and load the aircraft.
 4. Run `MS747 MCP Router.exe`.
@@ -98,7 +98,7 @@ These settings are only needed when using Aerowinx PSX.
 - **Sub Backlight - White Max**: Sets the maximum white backlight level for the sub panel.
 - **Sub Backlight - Orange Max**: Sets the maximum orange backlight level for the sub panel.
 - **Segment Display - Digit Brightness**: Adjusts the brightness of the 7-segment displays.
-- **Annunciator - LED Brightness**: Adjusts annunciator LED brightness.
+- **Annunciator - LED Brightness**: Sets your annunciator LED brightness. The simulator's indicator-light dimming (for example IND LTS DIM/BRT/TEST) is applied on top of this level, so your setting comes back after a lamp test.
 - **Save Display Settings**: Saves display, backlight, color, and brightness settings.
 
 Set these once for your cockpit lighting preference, then save them.
@@ -132,7 +132,8 @@ Use this before moving to another PC, reinstalling the router, or changing many 
 
 ### Update
 
-- **Update now**: Downloads and installs the latest available router release when an update is available.
+- **Update now**: Downloads and installs the latest available router release when an update is available. If anything goes wrong, your previous version is kept.
+- **Download latest version manually**: Opens the latest release ZIP in your browser. Use it whenever **Update now** cannot finish: close the router and extract the ZIP over your router folder. Your settings (mapping, Direction Reverse, acceleration, brightness, colors, PSX address) live in `user_data`, which release ZIPs never contain from v1.2.19 on, so they are kept. If the update fails saying Windows denied access to the folder, it's one of two things: the folder needs administrator permission to write to (most commonly `Program Files` -- Windows will show the standard admin permission/UAC prompt automatically in this case, just approve it), or Windows Security's **Controlled folder access** is blocking this app even in a normal folder like Documents or Desktop. For the second case, go to **Windows Security > Virus & threat protection > Manage ransomware protection > Allow an app through Controlled folder access** and add `MS747_MCP_Router.exe` and `MS747_MCP_Updater.exe` -- admin rights alone do not bypass this setting. If instead it fails with a certificate error, update to the latest version manually once (see the direct download link above); v1.2.17 and later verify the download against Windows' own certificate trust store and should no longer hit this.
 
 After an update, upload firmware if the router asks for it. The router keeps the MSFS Asobo 747 WASM Bridge up to date on its own once it has been installed once (see below), so a manual WASM update is normally not needed after a router update — just make sure MSFS is closed when the router starts, then restart MSFS.
 
@@ -342,6 +343,7 @@ If encoder acceleration or cockpit-specific controls do not work, check the WASM
 
 ### The MCP panel is not detected
 
+- If the status line says "NOT CONNECTED (COMx in use by another program)", or the console shows `PermissionError(13, 'Access is denied')`, another program already has the panel's COM port open -- most often a second copy of the router (check the system tray and Task Manager for `MS747_MCP_Router.exe`, including a copy from before an update or from another folder). Close it, or any Arduino IDE / serial monitor, and the router connects on its own. Only one program can use the port at a time. Newer versions refuse to start a second router copy and tell you so.
 - Check the USB cable.
 - Try a different USB port.
 - Avoid unreliable or unpowered USB hubs.
@@ -381,6 +383,14 @@ Do not edit presets manually for this problem.
 - Fully restart Microsoft Flight Simulator.
 - Load the Asobo 747 again.
 - Confirm the bridge status is active/live in the router.
+
+### Update fails with "Access is denied"
+
+- The updater now retries locked files, asks for administrator permission by itself when a file or folder needs it, and puts your previous version back if the update cannot finish -- a failed update no longer leaves a broken router.
+- If Windows shows an admin permission (UAC) prompt during the update, approve it.
+- If it still fails, add `MS747_MCP_Router.exe` and `MS747_MCP_Updater.exe` to **Windows Security > Virus & threat protection > Manage ransomware protection > Allow an app through Controlled folder access**. Admin rights do not bypass this setting.
+- Moving the whole router folder out of `Program Files` into Documents or Desktop avoids the admin-permission case entirely.
+- **Manual update (always works):** click **Download latest version manually** in **Debug & Options > Update** (also offered in every update error), or open https://github.com/msaerodev/ms747-mcp-router/releases/latest/download/MS747_MCP_Router_latest.zip . Close the router, then extract the ZIP over your router folder. Your settings in `user_data` are kept.
 
 ### PMDG aircraft does not respond
 
