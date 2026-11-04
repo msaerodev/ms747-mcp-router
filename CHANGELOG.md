@@ -1,5 +1,79 @@
 # Changelog
 
+## v1.2.19 - 2026-11-04
+
+### Fixes
+
+- MCP indicator (annunciator) brightness now always follows your **LED Brightness** setting. Before, releasing the PSX **IND LTS TEST** switch, or connecting to PSX or a PMDG aircraft, could leave the indicators at the simulator's own level -- sometimes too dim to see the orange lights -- until you moved the slider. The simulator's indicator dimming (IND LTS DIM/BRT/TEST) is now applied on top of your setting instead of replacing it.
+- In-app updates are much more robust against Windows permission problems:
+  - The update is downloaded to your temp folder, so a router folder that needs admin rights no longer stops the download.
+  - Files briefly locked by antivirus or by a router copy that is still closing are retried, and read-only files are handled.
+  - If a file or folder needs administrator rights, the updater asks for permission by itself.
+  - If the update still cannot finish, your previous version is restored instead of being left half-updated.
+- Extracting a release ZIP over your router folder no longer resets your display settings (brightness, colors, PSX address). Earlier ZIPs carried a settings file that replaced yours; product defaults now ship separately and are only used on a fresh install.
+- New **Download latest version manually** button (Debug & Options > Update) and a **Manual download** button in the update prompt. Every update error also offers the manual download as a last resort.
+
+### Update Instructions
+
+- If **Update now** from v1.2.18 or earlier fails, click the manual download link in the error message (or download from the release page), close the router, and extract the ZIP over your router folder. Your settings are kept. Later updates use the new, more robust updater.
+- With PSX or PMDG, the indicator lights now use your LED Brightness setting as their maximum; if they look dimmer than before, raise LED Brightness and click **Save Display Settings**.
+
+## v1.2.18 - 2026-10-04
+
+### Fixes
+
+- Fixed the panel showing "MCP: NOT CONNECTED" with brightness controls doing nothing, together with `PermissionError(13, 'Access is denied')` and "Write timeout" messages. Only one program can use the panel's COM port at a time; when a second copy of the router (for example a hidden copy from before an update, or a copy in another folder) was running, the first copy kept answering the panel's buttons while the second could not connect or change anything.
+- The router now refuses to start a second copy and tells you to use the one already running.
+- When the panel's COM port is held by another program, the status line now says so ("NOT CONNECTED (COM9 in use by another program)") and the console explains what to close, instead of a bare error.
+
+### Update Instructions
+
+- Close every running copy of the router first (check the system tray and Task Manager for `MS747_MCP_Router.exe`), then start the new version.
+
+## v1.2.17 - 2026-10-01
+
+### Fixes
+
+- Fixed automatic updates failing with a certificate error (`CERTIFICATE_VERIFY_FAILED: unable to get local issuer certificate`) on some Windows machines. This had nothing to do with admin rights or file permissions -- it was a missing certificate trust list in the packaged app. The router now verifies its update downloads against the same certificate trust store Windows itself already uses.
+
+### Update Instructions
+
+- If a previous update attempt failed with a certificate error, download and install this version manually once from the link below; future updates should then work normally through **Update now**.
+
+## v1.2.16 - 2026-09-29
+
+### Improvements
+
+- Rewrote the full user manual and one-page quick guide from a plain end-user perspective, with a clear "Supported Simulators and Aircraft" section up front.
+- Fixed a rare case where Hardware Test's annunciator light readings could still be affected by a connected PSX session.
+- Fixed a rare case where the router settings screen could read a value from the wrong internal thread when applying saved settings.
+
+### Fixes
+
+- Hardened the internal sequence tracking used to confirm Asobo 747 encoder commands were received, with no change to how those commands are actually sent.
+
+## v1.2.15 - 2026-09-29
+
+### Fixes
+
+- If an update still fails with an access-denied error after v1.2.14's automatic admin-permission prompt, the failure message now also explains Windows Security's **Controlled folder access**, which can block this app from writing to Documents, Desktop, and similar folders even with admin rights approved. The message tells you exactly where to allow the app (Windows Security > Virus & threat protection > Manage ransomware protection > Allow an app through Controlled folder access).
+
+### Update Instructions
+
+- Close the router before applying the update. Existing saved settings are preserved by the updater.
+- If this or a prior update failed with an access-denied error, check both the folder location (avoid `Program Files`) and Windows Security's Controlled folder access allow-list before retrying.
+
+## v1.2.14 - 2026-09-29
+
+### Fixes
+
+- Fixed automatic updates failing with an access-denied error when the router is installed in a folder that needs administrator permission to write to (most commonly `Program Files`). The router now shows the standard Windows administrator permission prompt automatically only when it's actually needed, instead of requiring the whole app to always run as administrator. Installing in a normal folder such as Documents or Desktop avoids this prompt entirely.
+
+### Update Instructions
+
+- Close the router before applying the update. Existing saved settings are preserved by the updater.
+- If the router is currently installed under `Program Files`, approve the administrator permission prompt when it appears during this update.
+
 ## v1.2.13 - 2026-09-29
 
 ### Improvements
