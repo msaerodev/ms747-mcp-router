@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.2.20 - 2026-11-04
+
+### New
+
+- **macOS version** (Apple Silicon and Intel, macOS 11+) for **Aerowinx PSX**. Panel connection, mapping, Direction Reverse, acceleration, brightness, Hardware Test, firmware upload, updates and Report a Problem work the same as on Windows. PMDG and the MSFS Asobo 747 need Windows simulators and are not offered on the Mac. The app is not signed by Apple: the first time, right-click it and choose **Open**.
+- Your settings are now kept in your user profile (`%LOCALAPPDATA%\MS747 MCP Router` on Windows, `~/Library/Application Support/MS747 MCP Router` on macOS). Updates, re-extracting the ZIP and new installs in any other folder keep your mapping, Direction Reverse, acceleration, brightness and PSX address. The first start of v1.2.20 copies your existing settings automatically (the old copy stays in the router folder). Put an empty `portable.flag` file next to the router to keep everything in one folder instead.
+
+### Update Instructions
+
+- Windows: use **Update now** as usual. Your settings are copied to your user profile on the first start.
+- macOS: download `MS747_MCP_Router_mac_latest.zip`, open it and drag the app into **Applications**.
+
 ## v1.2.19 - 2026-11-04
 
 ### Fixes
