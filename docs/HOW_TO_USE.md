@@ -2,10 +2,10 @@
 
 This guide is for pilots and builders using the MS747 MCP hardware panel with the MS747 MCP Router app. It focuses on normal setup and day-to-day use, without internal wiring or developer details.
 
-The revised v1.2.13 [User Manual](USER_MANUAL.md) gives ordered setup and troubleshooting
+The [User Manual](USER_MANUAL.md) gives ordered setup and troubleshooting
 steps. Download the [full Word manual](MS747_MCP_Router_User_Manual.docx) or the
 [one-page software insert](MS747_MCP_Router_Quick_User_Guide_v1.2.13.docx) separately.
-These updated Word documents are not inside the previously published v1.2.13 ZIP.
+These Word documents are not bundled inside the release ZIP.
 
 ## What the Router Does
 
@@ -42,7 +42,7 @@ and fully restart MSFS before **Manual Sync**.
 You need:
 
 - The MS747 MCP hardware panel connected by USB.
-- The latest MS747 MCP Router release extracted to a normal folder.
+- The latest MS747 MCP Router release extracted to a normal folder (Documents, Desktop, or similar -- not `Program Files`, which needs admin rights to write to and makes every future update ask for an admin permission prompt).
 - A supported simulator installed and working.
 - For Microsoft Flight Simulator, start the simulator normally before expecting aircraft data to appear.
 
@@ -210,7 +210,7 @@ To bring the router back after using Hide to Background, use the tray icon.
 When an update is available:
 
 1. Close the simulator if you are done flying.
-2. Install or extract the new router release.
+2. Click **Update now** in the update prompt or in **Debug & Options > Update**. If it cannot finish, click **Download latest version manually**, close the router and extract the ZIP over your router folder (settings are kept).
 3. Run the new router.
 4. Upload firmware if prompted.
 5. For MSFS Asobo 747, install/update the MSFS support package again if the router recommends it.
@@ -250,6 +250,7 @@ The router does not store a GitHub password or access token, and does not send e
 
 ### The MCP panel is not detected
 
+- If the status says "NOT CONNECTED (COMx in use by another program)", another program already has the panel's COM port open -- most often a second copy of the router. Check the system tray and Task Manager for `MS747_MCP_Router.exe` (including a copy from before an update or from another folder) and close it. A second copy can look half-working: the first copy still answers the panel's buttons, while the second one cannot change brightness.
 - Check the USB cable.
 - Try a different USB port.
 - Avoid unpowered hubs.
@@ -263,6 +264,14 @@ The router does not store a GitHub password or access token, and does not send e
 - Wait until the aircraft cockpit is fully loaded.
 - Use Manual Sync.
 - Restart the router after the aircraft is loaded.
+
+### Update fails with "Access is denied"
+
+- The updater now retries locked files, asks for administrator permission by itself when a file or folder needs it, and puts your previous version back if the update cannot finish -- a failed update no longer leaves a broken router.
+- If Windows shows an admin permission (UAC) prompt during the update, approve it.
+- If it still fails, add `MS747_MCP_Router.exe` and `MS747_MCP_Updater.exe` to **Windows Security > Virus & threat protection > Manage ransomware protection > Allow an app through Controlled folder access**. Admin rights do not bypass this setting.
+- Moving the whole router folder out of `Program Files` into Documents or Desktop avoids the admin-permission case entirely.
+- **Manual update (always works):** click **Download latest version manually** in **Debug & Options > Update** (also offered in every update error), or open https://github.com/msaerodev/ms747-mcp-router/releases/latest/download/MS747_MCP_Router_latest.zip . Close the router, then extract the ZIP over your router folder. Your settings in `user_data` are kept.
 
 ### A switch or knob works backward
 
