@@ -4,9 +4,9 @@ This guide is for pilots and builders using the MS747 MCP hardware panel with th
 
 You can find the full guide in `docs/HOW_TO_USE.md` in each release package.
 
-For the revised v1.2.13 setup and symptom-by-symptom troubleshooting procedures,
+For setup and symptom-by-symptom troubleshooting procedures,
 see [User Manual](docs/USER_MANUAL.md) or its [Word copy](docs/MS747_MCP_Router_User_Manual.docx).
-The revised [one-page software insert](docs/MS747_MCP_Router_Quick_User_Guide_v1.2.13.docx)
+The [one-page software insert](docs/MS747_MCP_Router_Quick_User_Guide_v1.2.13.docx)
 is provided separately from the already-published ZIP.
 
 ## Quick Start
@@ -40,6 +40,8 @@ For Asobo indicator checks, use the aircraft's own lamp test
 with the cockpit powered. All indicators lighting during that test confirms the
 indicator path, not that every flight mode can engage in the current flight conditions.
 Normal flight-mode checks are still incomplete; see [Changelog](CHANGELOG.md).
+If **Update now** fails, use **Download latest version manually** (Debug & Options > Update) or https://github.com/msaerodev/ms747-mcp-router/releases/latest/download/MS747_MCP_Router_latest.zip and extract it over the router folder; settings are kept.
+
 After updating, close MSFS, use **MSFS WASM Bridge > Install / Update**, and fully
 restart MSFS before **Manual Sync**.
 
