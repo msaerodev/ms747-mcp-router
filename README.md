@@ -16,7 +16,7 @@ Stable direct download link for website buttons:
 
 Current direct ZIP download:
 
-[MS747_MCP_Router_v1.2.19.zip](https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.2.19/MS747_MCP_Router_v1.2.19.zip)
+[MS747_MCP_Router_v1.2.20.zip](https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.2.20/MS747_MCP_Router_v1.2.20.zip) (Windows) · [MS747_MCP_Router_v1.2.20_mac.zip](https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.2.20/MS747_MCP_Router_v1.2.20_mac.zip) (macOS)
 
 [Changelog and known limitations](CHANGELOG.md)
 
@@ -25,6 +25,27 @@ Word copies: [Full manual](docs/MS747_MCP_Router_User_Manual.docx) and
 [One-page quick guide](docs/MS747_MCP_Router_Quick_User_Guide_v1.2.13.docx).
 
 Do not run the router from inside the ZIP file. Extract the ZIP first, then run `MS747 MCP Router.exe`.
+
+## macOS
+
+The router also runs on macOS (Apple Silicon and Intel, macOS 11 or later) with **Aerowinx PSX**. PMDG and the MSFS Asobo 747 need Windows simulators, so the Mac version shows the PSX mode only; everything else -- panel connection, mapping, Direction Reverse, acceleration, brightness, Hardware Test, firmware upload, updates and Report a Problem -- works the same as on Windows.
+
+1. Download [MS747_MCP_Router_mac_latest.zip](https://github.com/msaerodev/ms747-mcp-router/releases/latest/download/MS747_MCP_Router_mac_latest.zip) and open it.
+2. Drag **MS747 MCP Router** into your **Applications** folder.
+3. The app is not signed by Apple. The first time, **right-click (or Control-click) the app and choose Open**, then **Open** again. If macOS says it "cannot be opened", go to **System Settings > Privacy & Security** and click **Open Anyway**.
+4. Connect the MCP panel by USB. macOS includes the CH340 USB driver, so nothing else needs to be installed.
+5. Start PSX, then the router, and select the PSX host/port as on Windows.
+
+Hide to Background hides the window; click the router's Dock icon to bring it back.
+
+## Where Your Settings Are Kept
+
+From v1.2.20 your settings (mapping, Direction Reverse, acceleration, brightness, colours, PSX address) are stored in your user profile, not in the router folder:
+
+- Windows: `%LOCALAPPDATA%\MS747 MCP Router`
+- macOS: `~/Library/Application Support/MS747 MCP Router`
+
+Updating, re-extracting the ZIP, or installing a new copy in another folder therefore keeps them. The first time v1.2.20 starts, it copies the settings from your existing router folder (the old copy is left in place). To keep a self-contained copy in one folder instead, create an empty file named `portable.flag` next to the router.
 
 ## Supported Simulator Modes
 
@@ -133,7 +154,7 @@ Use this before moving to another PC, reinstalling the router, or changing many 
 ### Update
 
 - **Update now**: Downloads and installs the latest available router release when an update is available. If anything goes wrong, your previous version is kept.
-- **Download latest version manually**: Opens the latest release ZIP in your browser. Use it whenever **Update now** cannot finish: close the router and extract the ZIP over your router folder. Your settings (mapping, Direction Reverse, acceleration, brightness, colors, PSX address) live in `user_data`, which release ZIPs never contain from v1.2.19 on, so they are kept. If the update fails saying Windows denied access to the folder, it's one of two things: the folder needs administrator permission to write to (most commonly `Program Files` -- Windows will show the standard admin permission/UAC prompt automatically in this case, just approve it), or Windows Security's **Controlled folder access** is blocking this app even in a normal folder like Documents or Desktop. For the second case, go to **Windows Security > Virus & threat protection > Manage ransomware protection > Allow an app through Controlled folder access** and add `MS747_MCP_Router.exe` and `MS747_MCP_Updater.exe` -- admin rights alone do not bypass this setting. If instead it fails with a certificate error, update to the latest version manually once (see the direct download link above); v1.2.17 and later verify the download against Windows' own certificate trust store and should no longer hit this.
+- **Download latest version manually**: Opens the latest release ZIP in your browser. Use it whenever **Update now** cannot finish: close the router and extract the ZIP over your router folder. Your settings (mapping, Direction Reverse, acceleration, brightness, colors, PSX address) are kept: release ZIPs never contain them, and from v1.2.20 they are stored in your user profile (see **Where Your Settings Are Kept**). If the update fails saying Windows denied access to the folder, it's one of two things: the folder needs administrator permission to write to (most commonly `Program Files` -- Windows will show the standard admin permission/UAC prompt automatically in this case, just approve it), or Windows Security's **Controlled folder access** is blocking this app even in a normal folder like Documents or Desktop. For the second case, go to **Windows Security > Virus & threat protection > Manage ransomware protection > Allow an app through Controlled folder access** and add `MS747_MCP_Router.exe` and `MS747_MCP_Updater.exe` -- admin rights alone do not bypass this setting. If instead it fails with a certificate error, update to the latest version manually once (see the direct download link above); v1.2.17 and later verify the download against Windows' own certificate trust store and should no longer hit this.
 
 After an update, upload firmware if the router asks for it. The router keeps the MSFS Asobo 747 WASM Bridge up to date on its own once it has been installed once (see below), so a manual WASM update is normally not needed after a router update — just make sure MSFS is closed when the router starts, then restart MSFS.
 
