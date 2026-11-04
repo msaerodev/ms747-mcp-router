@@ -16,7 +16,7 @@ Stable direct download link for website buttons:
 
 Current direct ZIP download:
 
-[MS747_MCP_Router_v1.2.20.zip](https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.2.20/MS747_MCP_Router_v1.2.20.zip) (Windows) · [MS747_MCP_Router_v1.2.20_mac.zip](https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.2.20/MS747_MCP_Router_v1.2.20_mac.zip) (macOS)
+[MS747_MCP_Router_v1.2.21.zip](https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.2.21/MS747_MCP_Router_v1.2.21.zip) (Windows) · [MS747_MCP_Router_v1.2.21_mac.zip](https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.2.21/MS747_MCP_Router_v1.2.21_mac.zip) (macOS)
 
 [Changelog and known limitations](CHANGELOG.md)
 
@@ -175,7 +175,7 @@ Do not unplug the panel during firmware upload. If upload fails, reconnect the p
 - **MSFS location**: Shows the detected or selected Microsoft Flight Simulator location.
 - **Browse**: Manually selects the MSFS installation location.
 - **Open**: Opens the selected MSFS folder.
-- **Install / Update WASM Bridge**: Installs the router support package for the MSFS Asobo 747.
+- **Install / Update WASM Bridge**: Installs the router support package for the MSFS Asobo 747. Close MSFS first: while MSFS uses the package the router leaves it unchanged, and if an update fails the previous package is put back. Uninstall keeps a backup copy.
 - **Uninstall WASM Bridge**: Removes the installed router support package.
 - **Refresh**: Re-checks bridge installation and live status.
 
