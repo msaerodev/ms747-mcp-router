@@ -16,7 +16,7 @@ Stable direct download link for website buttons:
 
 Current direct ZIP download:
 
-[MS747_MCP_Router_v1.2.22.zip](https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.2.22/MS747_MCP_Router_v1.2.22.zip) (Windows) · [MS747_MCP_Router_v1.2.21_mac.zip](https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.2.21/MS747_MCP_Router_v1.2.21_mac.zip) (macOS; version 1.2.22 for Mac follows later)
+[MS747_MCP_Router_v1.2.22.zip](https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.2.22/MS747_MCP_Router_v1.2.22.zip) (Windows) · [MS747_MCP_Router_v1.2.22_mac.zip](https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.2.22/MS747_MCP_Router_v1.2.22_mac.zip) (macOS)
 
 [Changelog and known limitations](CHANGELOG.md)
 
