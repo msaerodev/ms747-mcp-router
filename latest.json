@@ -18,5 +18,10 @@
         "### Update Instructions",
         "- Use **Update now** as usual. The router asks before it uploads firmware.",
         "- The MSFS Asobo 747 support package is updated automatically when MSFS is closed. Its module is unchanged. Start MSFS afterwards."
-    ]
+    ],
+    "macos": {
+        "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.2.22/MS747_MCP_Router_v1.2.22_mac.zip",
+        "sha256": "cc0efaa81ea0c51bca8e827071f0bc27a06961373257f3e55932618234babe37",
+        "size": 26165399
+    }
 }
