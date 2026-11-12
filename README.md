@@ -16,7 +16,7 @@ Stable direct download link for website buttons:
 
 Current direct ZIP download:
 
-[MS747_MCP_Router_v1.2.21.zip](https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.2.21/MS747_MCP_Router_v1.2.21.zip) (Windows) · [MS747_MCP_Router_v1.2.21_mac.zip](https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.2.21/MS747_MCP_Router_v1.2.21_mac.zip) (macOS)
+[MS747_MCP_Router_v1.2.22.zip](https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.2.22/MS747_MCP_Router_v1.2.22.zip) (Windows) · [MS747_MCP_Router_v1.2.21_mac.zip](https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.2.21/MS747_MCP_Router_v1.2.21_mac.zip) (macOS; version 1.2.22 for Mac follows later)
 
 [Changelog and known limitations](CHANGELOG.md)
 
@@ -42,12 +42,12 @@ Hide to Background hides the window; click the router's Dock icon to bring it ba
 
 ## Where Your Settings Are Kept
 
-From v1.2.20 your settings (mapping, Direction Reverse, acceleration, brightness, colours, PSX address) are stored in your user profile, not in the router folder:
+From v1.2.20 your settings (mapping, Direction Reverse, acceleration, brightness, colours, PSX address, simulator choice and the Auto-detect setting) are stored in your user profile, not in the router folder:
 
 - Windows: `%LOCALAPPDATA%\MS747 MCP Router`
 - macOS: `~/Library/Application Support/MS747 MCP Router`
 
-Updating, re-extracting the ZIP, or installing a new copy in another folder therefore keeps them. The first time v1.2.20 starts, it copies the settings from your existing router folder (the old copy is left in place). To keep a self-contained copy in one folder instead, create an empty file named `portable.flag` next to the router.
+Updating, re-extracting the ZIP, or installing a new copy in another folder therefore keeps them. To keep your own copy, use **Settings File > Save Settings to File...** on the Main tab; **Load Settings from File...** restores it, for example on another PC. The first time v1.2.20 starts, it copies the settings from your existing router folder (the old copy is left in place). To keep a self-contained copy in one folder instead, create an empty file named `portable.flag` next to the router.
 
 ## Supported Simulator Modes
 
@@ -91,8 +91,8 @@ The **Main Settings** tab is for normal flying, simulator selection, display bri
 - **P3D**: Selects Prepar3D mode.
 - **MSFS**: Selects Microsoft Flight Simulator mode.
 - **Aircraft**: Selects the aircraft profile used by the selected simulator platform.
-- **Auto-detect running simulator**: Lets the router detect a running simulator and switch mode automatically.
-- **Detect Now**: Runs simulator detection immediately.
+- **Auto-detect running simulator**: Lets the router detect a running simulator and switch mode automatically. It does not leave the selected simulator while that simulator is only restarting: it waits until the simulator has been closed for 3 minutes. Untick it to stay on your choice permanently (for example PSX on a PC that also runs MSFS). The router remembers your simulator choice and this setting.
+- **Detect Now**: Runs simulator detection immediately and switches at once, even when Auto-detect is off.
 
 Use manual selection when troubleshooting. Automatic detection is convenient for normal use, but manual mode makes testing clearer.
 
@@ -109,7 +109,7 @@ Use **Manual Sync** after loading an aircraft, reconnecting the panel, changing 
 
 - **Host**: The PSX computer address.
 - **Port**: The PSX network port.
-- **Apply**: Saves and applies the PSX connection settings.
+- **Apply**: Applies and saves the PSX connection settings. The router keeps reconnecting to PSX by itself (every 2 seconds) while PSX mode is selected, so you can restart PSX without touching the router.
 
 These settings are only needed when using Aerowinx PSX.
 
@@ -122,7 +122,8 @@ These settings are only needed when using Aerowinx PSX.
 - **Sub Backlight - Orange Max**: Sets the maximum orange backlight level for the sub panel.
 - **Segment Display - Digit Brightness**: Adjusts the brightness of the 7-segment displays.
 - **Annunciator - LED Brightness**: Sets your annunciator LED brightness. The simulator's indicator-light dimming (for example IND LTS DIM/BRT/TEST) is applied on top of this level, so your setting comes back after a lamp test.
-- **Save Display Settings**: Saves display, backlight, color, and brightness settings.
+- **Save Display Settings**: Saves display, backlight, color, and brightness settings. Every setting on the Main and Debug tabs is also saved automatically when you change it and when you close the router, so it starts the way you left it.
+- **Settings File > Save Settings to File... / Load Settings from File...**: Saves every setting (simulator choice, PSX address, display, LED colours, options, mapping, Direction Reverse, acceleration) to one file, or loads it back. Your current files are backed up before a load. Mapping changes are still saved with the Save button of each mapping editor.
 
 Set these once for your cockpit lighting preference, then save them.
 
@@ -225,8 +226,12 @@ The **Mapping & Test** tab is for hardware verification, direction correction, m
 - **HARDWARE TEST**: Starts the guided hardware test.
 - **Direction Reverse**: Opens a window to reverse switches or encoders that work backward.
 - **See All Mappings**: Opens a table view of current switch, encoder, and annunciator mappings.
+- **Aircraft Packages** (Windows): No aircraft packages are published yet. The router uses its built-in connections.
+- **Encoder Advanced** (optional): Reads and saves split-click recovery timing separately for IAS, HDG, ALT, and V/S. Requires the matching panel firmware. Standard firmware starts with recovery off.
 
 Use **Hardware Test** before changing mappings. It helps separate a physical hardware issue from a configuration issue.
+
+In **Encoder Advanced**, select the knob and record exactly 120 consecutive clicks clockwise and 120 counterclockwise. **Use Raw Logs…** previews timing from logs with the same count in each direction. Select **Apply to Panel** to save an imported proposal. Auto Calibration keeps settings that already pass and saves a change only after both directions replay with the exact counts and no reverse clicks. To enter timing manually in milliseconds, edit the fields and choose **Apply to Panel**. **Restore Defaults** restores the selected knob's firmware defaults.
 
 ### Hardware Test
 
@@ -362,6 +367,8 @@ Startup diagnostic noise is kept out of the visible console when it is not usefu
 
 If encoder acceleration or cockpit-specific controls do not work, check the WASM Bridge status first and restart MSFS after installing it.
 
+With the aircraft powered, **LT TEST** lights the annunciators and shows a test pattern in the IAS, HDG, ALT and V/S windows. When you release TEST, the panel shows the current values again.
+
 ## Troubleshooting
 
 ### The MCP panel is not detected
@@ -399,6 +406,7 @@ Do not edit presets manually for this problem.
 - Rotate the encoder slowly and quickly in both directions.
 - Watch the CW, CCW, and total counts.
 - If counts only appear at certain angles, inspect the physical knob, connector, and soldering.
+- If a knob still misses clicks, you can try **Encoder Advanced** (optional, needs the matching panel firmware).
 
 ### MSFS Asobo 747 knobs feel slow or incomplete
 
