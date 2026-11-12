@@ -1,5 +1,29 @@
 # Changelog
 
+## v1.2.22 - 2026-11-12
+
+### New
+
+- **Encoder Advanced and Auto Calibration (optional).** Set up IAS, HDG, ALT and V/S separately. Auto Calibration needs 120 clicks in each direction and keeps timing that already works. You can also enter timing by hand or restore firmware defaults per knob. Requires the matching panel firmware. Standard firmware starts with split-click recovery off.
+- **Settings.** The router remembers the simulator you chose and the Auto-detect setting, and saves settings automatically. Use **Settings File** on the main tab to save or load them. A manual PSX choice stays through a short PSX restart. Controls fit or scroll on smaller screens.
+- **Firmware upload.** Uses the bundled firmware, asks before uploading, and offers manual recovery if the panel does not answer.
+- **MSFS Asobo 747.** LT TEST lights all four number windows and restores the latest values when it ends.
+
+### Fixes
+
+- **PMDG.** A blank or unavailable IAS window no longer closes the app. Speed limits such as Mach .99 and IAS 399 no longer freeze the knob. Rejected speed targets are cleared. Old knob clicks are dropped after 2 seconds. Refresh keeps working while a speed command waits.
+- **PMDG 777 (MSFS).** A parked aircraft no longer causes the connection to restart every 60 seconds.
+- **MSFS Asobo 747.** If a command gets no reply in time, the router discards waiting commands and reports that the outcome is uncertain.
+
+### Aircraft Packages
+
+- No aircraft packages are published yet. The router uses its built-in connections.
+
+### Update Instructions
+
+- Use **Update now** as usual. The router asks before it uploads firmware.
+- The MSFS Asobo 747 support package is updated automatically when MSFS is closed. Its module is unchanged. Start MSFS afterwards.
+
 ## v1.2.21 - 2026-11-04
 
 ### Fixes
