@@ -1,16 +1,22 @@
 {
-    "version": "1.2.21",
-    "url": "https://raw.githubusercontent.com/msaerodev/ms747-mcp-router/downloads/v1.2.21/MS747_MCP_Router_v1.2.21.zip",
-    "sha256": "f490fb50956d24efb462b900d753694156a7884b2b0cfbd877bf65a948a667ec",
-    "size": 35050830,
+    "version": "1.2.22",
+    "url": "https://raw.githubusercontent.com/msaerodev/ms747-mcp-router/downloads/v1.2.22/MS747_MCP_Router_v1.2.22.zip",
+    "sha256": "fd1c79d93c1ade13d6cd95bc7c8070a92f3700057f607f0001d77f68a8b6ab85",
+    "size": 38952788,
     "notes": [
-        "MSFS Asobo 747 support package: install/update can no longer leave a broken package; it is not touched while MSFS uses it, is checked first, and the previous package is restored on failure.",
-        "PSX: knob turns and presses made while PSX was disconnected are no longer sent in a burst when it reconnects.",
-        "PMDG/MSFS: no more connection-helper restarts every few seconds while the simulator is closed; a lost simulator connection is restarted automatically. Logs no longer grow without limit."
-    ],
-    "macos": {
-        "url": "https://github.com/msaerodev/ms747-mcp-router/releases/download/v1.2.21/MS747_MCP_Router_v1.2.21_mac.zip",
-        "sha256": "09487360dcc3e1af61f5f79720449a51debdc76672e03fde1bab5724a81fb10f",
-        "size": 26077742
-    }
+        "### New",
+        "- **Encoder Advanced and Auto Calibration (optional).** Set up IAS, HDG, ALT and V/S separately. Auto Calibration needs 120 clicks in each direction and keeps timing that already works. You can also enter timing by hand or restore firmware defaults per knob. Requires the matching panel firmware. Standard firmware starts with split-click recovery off.",
+        "- **Settings.** The router remembers the simulator you chose and the Auto-detect setting, and saves settings automatically. Use **Settings File** on the main tab to save or load them. A manual PSX choice stays through a short PSX restart. Controls fit or scroll on smaller screens.",
+        "- **Firmware upload.** Uses the bundled firmware, asks before uploading, and offers manual recovery if the panel does not answer.",
+        "- **MSFS Asobo 747.** LT TEST lights all four number windows and restores the latest values when it ends.",
+        "### Fixes",
+        "- **PMDG.** A blank or unavailable IAS window no longer closes the app. Speed limits such as Mach .99 and IAS 399 no longer freeze the knob. Rejected speed targets are cleared. Old knob clicks are dropped after 2 seconds. Refresh keeps working while a speed command waits.",
+        "- **PMDG 777 (MSFS).** A parked aircraft no longer causes the connection to restart every 60 seconds.",
+        "- **MSFS Asobo 747.** If a command gets no reply in time, the router discards waiting commands and reports that the outcome is uncertain.",
+        "### Aircraft Packages",
+        "- No aircraft packages are published yet. The router uses its built-in connections.",
+        "### Update Instructions",
+        "- Use **Update now** as usual. The router asks before it uploads firmware.",
+        "- The MSFS Asobo 747 support package is updated automatically when MSFS is closed. Its module is unchanged. Start MSFS afterwards."
+    ]
 }
