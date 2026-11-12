@@ -95,7 +95,9 @@ Typical choices:
 - PMDG 777 for the PMDG 777.
 - MSFS Asobo 747 for the default Microsoft Flight Simulator 747-8i.
 
-If automatic simulator detection is enabled, the router may switch modes based on what is running. If you are testing or troubleshooting, manual selection is often clearer.
+If automatic simulator detection is enabled, the router may switch modes based on what is running. It stays on the selected simulator while that simulator restarts, and switches only after it has been closed for 3 minutes. Untick **Auto-detect running simulator** to stay on your choice. The router remembers the simulator you selected and the Auto-detect setting.
+
+The router saves your settings automatically when you change them and when you close it. To back up or move all your settings, use **Settings File** on the Main tab: **Save Settings to File...** and **Load Settings from File...**.
 
 ## Microsoft Flight Simulator Asobo 747 Setup
 
@@ -113,7 +115,13 @@ Use the router's MSFS WASM Bridge section:
 
 Important: Microsoft Flight Simulator usually loads these support packages only during simulator startup. Installing the package while the simulator is already running is not enough; restart MSFS.
 
-After the first install, the router keeps this package up to date on its own: each time the router starts, it checks whether a newer WASM bridge is bundled with your router version and, if MSFS is not currently running, updates it automatically in the background. You do not need to click Install/Update again after a router update — just make sure MSFS is closed when you start the router so the update can apply, then restart MSFS.
+After the first install, the router checks the support package on startup and updates it when MSFS is closed. Start MSFS after the update to load it. This update also happens once after you update the router to 1.2.22.
+
+### Aircraft Packages (Windows)
+
+No aircraft packages are published yet. The router uses its built-in connections. For the MSFS Asobo 747, keep using **Install / Update WASM Bridge**.
+
+Full router updates install changes to the app itself.
 
 ## PMDG Aircraft Setup
 
@@ -304,6 +312,18 @@ You can reverse these items individually:
 Turn on the checkbox for the item that works backward, click Save, and test it again. The setting is saved permanently and will remain after restarting the router or updating the app.
 
 Use Hardware Test first if you are not sure whether the problem is reversed direction or an intermittent contact. Hardware Test shows the raw hardware signal so you can still diagnose wiring, connectors, and soldering.
+
+### Calibrate a knob that misses clicks
+
+Encoder Advanced is optional and requires the matching panel firmware. Standard firmware starts with split-click recovery off, and most knobs need no change. To tune a knob, open **Mapping & Test → Encoder Advanced** and select IAS, HDG, ALT, or V/S. Leave the knob at a detent and select **Record 120 CW**. Turn exactly 120 consecutive clicks clockwise and select **Finish CW** within 60 seconds. Repeat with **Record 120 CCW** and **Finish CCW**. This is six turns on a 20-detent knob or five turns on a 24-detent knob. **Use Raw Logs…** previews timing from a continuous 120-click test in each direction. Verify that the logs came from this panel and knob, then select **Apply to Panel** to save the proposal.
+
+Auto Calibration keeps existing settings if they already reproduce the test. If a change is needed, it verifies the proposed settings against both directions and saves them only when the counts match exactly, with no reverse clicks or lost samples. A saved change is confirmed by the panel's reply.
+
+For manual tuning, enter timing in milliseconds, set **Enable recovery for this knob** as needed, and choose **Apply to Panel**. **Restore Defaults** reads back the selected knob's defaults from the firmware. **Update Firmware** uploads the bundled firmware and preserves saved tuning.
+
+### Check the Asobo 747 lamps and displays
+
+With the aircraft MCP powered, its **LT TEST** state lights the annunciators and displays a test pattern on the panel’s IAS, HDG, ALT and V/S windows. When you release TEST, the router restores the current values and any blank V/S window.
 
 ### MSFS Asobo 747 knobs feel slow or incomplete
 
